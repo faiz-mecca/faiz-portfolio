@@ -1,13 +1,13 @@
 {
-  "_comment": "Edit ONLY this file to add/remove videos. Then run: npm run build:videos . That fetches titles + thumbnails and regenerates videos.generated.json. 'caption' is the short label shown on the card; 'ar' is optional ('9/16' or '16/9') and auto-inferred from the platform if omitted.",
+  "_comment": "Edit ONLY this file to add/remove videos. Then run: npm run build:videos . That fetches titles + thumbnails and regenerates videos.generated.json. 'caption' = short label, 'description' = one line under it, 'ar' is optional ('9/16' or '16/9') and auto-inferred from the platform if omitted.",
   "categories": [
     {
       "id": "talent",
       "title": "Talent",
       "blurb": "In front of the camera",
       "videos": [
-        { "url": "https://www.tiktok.com/@merakiagency.id/video/7602200743814237448", "caption": "Expressive Talent" },
-        { "url": "https://www.tiktok.com/@botomotif/video/7648977134995868936", "caption": "Informative Talent" }
+        { "url": "https://www.tiktok.com/@merakiagency.id/video/7602200743814237448", "caption": "Expressive Talent", "description": "Acting an expressive character — carrying the punchline with face and energy." },
+        { "url": "https://www.tiktok.com/@botomotif/video/7648977134995868936", "caption": "Informative Talent", "description": "On-camera host, delivering the details clear and easy to follow." }
       ]
     },
     {
@@ -15,8 +15,8 @@
       "title": "Videographer",
       "blurb": "Cinematic shooting",
       "videos": [
-        { "url": "https://drive.google.com/file/d/1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI/view", "caption": "Cinematic Framing" },
-        { "url": "https://www.youtube.com/watch?v=88zaKmRoVHI", "caption": "Subject Framing" }
+        { "url": "https://drive.google.com/file/d/1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI/view", "caption": "Cinematic Framing", "description": "Cinematic camera work — mood and movement baked into every shot." },
+        { "url": "https://www.youtube.com/watch?v=88zaKmRoVHI", "caption": "Subject Framing", "description": "Framing the subject just right, clean composition straight out of camera." }
       ]
     },
     {
@@ -24,8 +24,8 @@
       "title": "Short Form Edit",
       "blurb": "Reels & shorts, built to hook fast",
       "videos": [
-        { "url": "https://www.instagram.com/reel/DM97y1dTUvK/", "caption": "Aesthetic Typography" },
-        { "url": "https://www.tiktok.com/@botomotif/video/7538709964748082440", "caption": "Elegant Shoot + Edit" }
+        { "url": "https://www.instagram.com/reel/DM97y1dTUvK/", "caption": "Aesthetic Typography", "description": "Short-form edit with clean, aesthetic typography and tight rhythm." },
+        { "url": "https://www.tiktok.com/@botomotif/video/7538709964748082440", "caption": "Elegant Shoot + Edit", "description": "Shot and edited by me — an elegant, premium feel end to end." }
       ]
     },
     {
@@ -33,8 +33,8 @@
       "title": "Long Form Edit",
       "blurb": "Paced edits that hold attention",
       "videos": [
-        { "url": "https://www.youtube.com/watch?v=hRiuRIChtJg", "caption": "Edited for Big Creators" },
-        { "url": "https://www.youtube.com/watch?v=6gUQss9_2ZU", "caption": "Clean Vlog Edit" }
+        { "url": "https://www.youtube.com/watch?v=hRiuRIChtJg", "caption": "Edited for Big Creators", "description": "Long-form edit for a big creator — pacing that pulls real views." },
+        { "url": "https://www.youtube.com/watch?v=6gUQss9_2ZU", "caption": "Clean Vlog Edit", "description": "Simple, clean vlog edit that stays easy to watch all the way through." }
       ]
     }
   ]

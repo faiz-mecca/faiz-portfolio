@@ -89,6 +89,15 @@ async function download(url, dest) {
 
 const inferAr = (platform, override) => override || (platform === 'tiktok' || platform === 'instagram' ? '9/16' : '16/9');
 
+/** Inline-player (iframe) URL per platform. All four verified embeddable. */
+function buildEmbed({ platform, id }) {
+  if (platform === 'youtube') return `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+  if (platform === 'tiktok') return `https://www.tiktok.com/embed/v2/${id}`;
+  if (platform === 'instagram') return `https://www.instagram.com/reel/${id}/embed/`;
+  if (platform === 'drive') return `https://drive.google.com/file/d/${id}/preview`;
+  return '';
+}
+
 async function main() {
   await mkdir(THUMB_DIR, { recursive: true });
   const source = JSON.parse(await readFile(path.join(ROOT, 'videos.json'), 'utf8'));
@@ -118,10 +127,12 @@ async function main() {
       }
       items.push({
         caption: v.caption,
+        description: v.description || '',
         title: title || v.caption,
         platform: info.platform,
         platformLabel: info.label,
         link: info.link,
+        embed: buildEmbed(info),
         thumb: thumbOk ? rel : '',
         ar: inferAr(info.platform, v.ar),
       });
