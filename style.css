@@ -147,13 +147,7 @@ section{ padding: 140px 8vw; position:relative; }
   letter-spacing:1px; margin:16px 0 18px; color:var(--text);
 }
 .sc-title .sc-ghost{ color:transparent; -webkit-text-stroke:1.4px var(--gold); }
-.sc-desc{ color:var(--text-dim); font-size:clamp(14px,1.1vw,16px); line-height:1.75; max-width:46ch; margin-bottom:24px; }
-.sc-cta{
-  display:inline-flex; align-items:center; gap:9px; color:var(--text);
-  font-size:12.5px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
-  border-bottom:1px solid var(--gold); padding-bottom:5px; transition:color .3s;
-}
-.showcase:hover .sc-cta{ color:var(--gold-light); }
+.sc-desc{ color:var(--text-dim); font-size:clamp(14px,1.1vw,16px); line-height:1.75; max-width:48ch; }
 .vload-error{ color:var(--text-dim); font-size:14px; }
 .vload-error code{ color:var(--gold-light); background:#1a1f2b; padding:2px 7px; border-radius:5px; }
 

@@ -51,7 +51,6 @@ function showcaseHTML(item, categoryTitle) {
       <span class="sc-eyebrow">${esc(categoryTitle)} · ${esc(name)}</span>
       <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
       ${item.description ? `<p class="sc-desc">${esc(item.description)}</p>` : ''}
-      <span class="sc-cta">Watch on ${esc(name)} <span aria-hidden="true">&#8594;</span></span>
     </div>
   </div>`;
 }
