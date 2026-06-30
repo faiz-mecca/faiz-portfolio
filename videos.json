@@ -1,0 +1,41 @@
+{
+  "_comment": "Edit ONLY this file to add/remove videos. Then run: npm run build:videos . That fetches titles + thumbnails and regenerates videos.generated.json. 'caption' is the short label shown on the card; 'ar' is optional ('9/16' or '16/9') and auto-inferred from the platform if omitted.",
+  "categories": [
+    {
+      "id": "talent",
+      "title": "Talent",
+      "blurb": "In front of the camera",
+      "videos": [
+        { "url": "https://www.tiktok.com/@merakiagency.id/video/7602200743814237448", "caption": "Expressive Talent" },
+        { "url": "https://www.tiktok.com/@botomotif/video/7648977134995868936", "caption": "Informative Talent" }
+      ]
+    },
+    {
+      "id": "videographer",
+      "title": "Videographer",
+      "blurb": "Cinematic shooting",
+      "videos": [
+        { "url": "https://drive.google.com/file/d/1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI/view", "caption": "Cinematic Framing" },
+        { "url": "https://www.youtube.com/watch?v=88zaKmRoVHI", "caption": "Subject Framing" }
+      ]
+    },
+    {
+      "id": "short-form-edit",
+      "title": "Short Form Edit",
+      "blurb": "Reels & shorts, built to hook fast",
+      "videos": [
+        { "url": "https://www.instagram.com/reel/DM97y1dTUvK/", "caption": "Aesthetic Typography" },
+        { "url": "https://www.tiktok.com/@botomotif/video/7538709964748082440", "caption": "Elegant Shoot + Edit" }
+      ]
+    },
+    {
+      "id": "long-form-edit",
+      "title": "Long Form Edit",
+      "blurb": "Paced edits that hold attention",
+      "videos": [
+        { "url": "https://www.youtube.com/watch?v=hRiuRIChtJg", "caption": "Edited for Big Creators" },
+        { "url": "https://www.youtube.com/watch?v=6gUQss9_2ZU", "caption": "Clean Vlog Edit" }
+      ]
+    }
+  ]
+}

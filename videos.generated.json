@@ -1,0 +1,105 @@
+{
+  "generatedAt": "2026-06-30T12:59:37.345Z",
+  "categories": [
+    {
+      "id": "talent",
+      "title": "Talent",
+      "blurb": "In front of the camera",
+      "items": [
+        {
+          "caption": "Expressive Talent",
+          "title": "Siapa yang relate? Coba ungkapin isi kepala kalian 🤯 #POV #AgencyLife #MerakiAgency",
+          "platform": "tiktok",
+          "platformLabel": "TikTok",
+          "link": "https://www.tiktok.com/@merakiagency.id/video/7602200743814237448",
+          "thumb": "assets/thumbs/tiktok-7602200743814237448.jpg",
+          "ar": "9/16"
+        },
+        {
+          "caption": "Informative Talent",
+          "title": "Lamborghini Urus S 4.0 #botomotif #botomotifsupercar #botomotifcollection #lamborghini #lamborghiniurus",
+          "platform": "tiktok",
+          "platformLabel": "TikTok",
+          "link": "https://www.tiktok.com/@botomotif/video/7648977134995868936",
+          "thumb": "assets/thumbs/tiktok-7648977134995868936.jpg",
+          "ar": "9/16"
+        }
+      ]
+    },
+    {
+      "id": "videographer",
+      "title": "Videographer",
+      "blurb": "Cinematic shooting",
+      "items": [
+        {
+          "caption": "Cinematic Framing",
+          "title": "PT HISOTEX",
+          "platform": "drive",
+          "platformLabel": "Video",
+          "link": "https://drive.google.com/file/d/1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI/view",
+          "thumb": "assets/thumbs/drive-1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI.jpg",
+          "ar": "16/9"
+        },
+        {
+          "caption": "Subject Framing",
+          "title": "Bawa Ford Mustang ke Tongkrongan Buna… Endingnya Gue Ditelepon Bahlil Lahadalia?! 😳🔥",
+          "platform": "youtube",
+          "platformLabel": "YouTube",
+          "link": "https://www.youtube.com/watch?v=88zaKmRoVHI",
+          "thumb": "assets/thumbs/youtube-88zaKmRoVHI.jpg",
+          "ar": "16/9"
+        }
+      ]
+    },
+    {
+      "id": "short-form-edit",
+      "title": "Short Form Edit",
+      "blurb": "Reels & shorts, built to hook fast",
+      "items": [
+        {
+          "caption": "Aesthetic Typography",
+          "title": "Aesthetic Typography",
+          "platform": "instagram",
+          "platformLabel": "Reels",
+          "link": "https://www.instagram.com/reel/DM97y1dTUvK/",
+          "thumb": "assets/thumbs/instagram-DM97y1dTUvK.jpg",
+          "ar": "9/16"
+        },
+        {
+          "caption": "Elegant Shoot + Edit",
+          "title": "FS. Ferrari SF90 Spider #ferrari #ferrarisf90 #ferrarisf90spider #ferrariclub #botomotif ",
+          "platform": "tiktok",
+          "platformLabel": "TikTok",
+          "link": "https://www.tiktok.com/@botomotif/video/7538709964748082440",
+          "thumb": "assets/thumbs/tiktok-7538709964748082440.jpg",
+          "ar": "9/16"
+        }
+      ]
+    },
+    {
+      "id": "long-form-edit",
+      "title": "Long Form Edit",
+      "blurb": "Paced edits that hold attention",
+      "items": [
+        {
+          "caption": "Edited for Big Creators",
+          "title": "Nyobain Semua Scam Di Turki!",
+          "platform": "youtube",
+          "platformLabel": "YouTube",
+          "link": "https://www.youtube.com/watch?v=hRiuRIChtJg",
+          "thumb": "assets/thumbs/youtube-hRiuRIChtJg.jpg",
+          "ar": "16/9"
+        },
+        {
+          "caption": "Clean Vlog Edit",
+          "title": "Di Undang VIP Koocester, Satu Room Sama Gabriel Rey… Mobil 2M Gue Nyempil di Antara Supercar 😳",
+          "platform": "youtube",
+          "platformLabel": "YouTube",
+          "link": "https://www.youtube.com/watch?v=6gUQss9_2ZU",
+          "thumb": "assets/thumbs/youtube-6gUQss9_2ZU.jpg",
+          "ar": "16/9"
+        }
+      ]
+    }
+  ]
+}

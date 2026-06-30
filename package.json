@@ -5,7 +5,8 @@
   "description": "Single-page portfolio for Faiz Mecca — content creator / talent / videographer / editor",
   "scripts": {
     "dev": "live-server --port=5173 --no-browser",
-    "start": "live-server --port=5173"
+    "start": "live-server --port=5173",
+    "build:videos": "node scripts/build-videos.mjs"
   },
   "devDependencies": {
     "live-server": "^1.2.2"
