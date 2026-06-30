@@ -15,7 +15,7 @@
       "title": "Videographer",
       "blurb": "Cinematic shooting",
       "videos": [
-        { "url": "https://drive.google.com/file/d/1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI/view", "caption": "Cinematic Framing", "description": "Corporate profile shoot for PT Hisotex — cinematic camera work with deliberate lighting and movement that gives the brand a premium, authoritative on-screen presence." },
+        { "url": "https://drive.google.com/file/d/1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI/view", "caption": "Cinematic Framing", "source": "Company Profile", "description": "Corporate profile shoot for PT Hisotex — cinematic camera work with deliberate lighting and movement that gives the brand a premium, authoritative on-screen presence." },
         { "url": "https://www.youtube.com/watch?v=88zaKmRoVHI", "caption": "Subject Framing", "description": "Automotive feature shoot — composing the talent and the car with clean, intentional framing so every shot reads clearly and feels polished straight out of camera." }
       ]
     },
@@ -34,7 +34,7 @@
       "blurb": "Paced edits that hold attention",
       "videos": [
         { "url": "https://www.youtube.com/watch?v=hRiuRIChtJg", "caption": "Edited for Big Creators", "description": "Editing for Edward Halim, a creator with a large subscriber base — keeping a long-form video engaging the whole way through and helping drive strong, lasting views by making it genuinely watchable at length." },
-        { "url": "https://www.youtube.com/watch?v=6gUQss9_2ZU", "caption": "Clean Vlog Edit", "description": "Long-form vlog edit (VIP Koocester feature) — clean, simple cutting and a relaxed, well-judged pace that keeps the story easy to follow from start to finish." }
+        { "url": "https://www.youtube.com/watch?v=6gUQss9_2ZU", "caption": "Clean Vlog Edit", "description": "Long-form vlog edit (VIP Koocester Car Meet) — clean, simple cutting and a relaxed, well-judged pace that keeps the story easy to follow from start to finish." }
       ]
     }
   ]

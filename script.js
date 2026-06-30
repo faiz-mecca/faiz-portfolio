@@ -40,7 +40,8 @@ function showcaseHTML(item, categoryTitle) {
   const name = platformName(item.platform);
   return `<div class="showcase reveal ${vertical ? 'showcase--vertical' : 'showcase--horizontal'}">
     <a class="sc-media" href="${esc(item.link)}" target="_blank" rel="noopener"
-       data-embed="${esc(item.embed)}" data-ar="${esc(item.ar)}" data-platform="${esc(item.platform)}"
+       data-embed="${esc(item.embed)}" data-file="${esc(item.file || '')}"
+       data-ar="${esc(item.ar)}" data-platform="${esc(item.platform)}"
        title="Play — ${esc(item.title)}">
       <div class="thumb" style="${bg}">
         <span class="ptag">${esc(item.platformLabel)}</span>
@@ -48,7 +49,7 @@ function showcaseHTML(item, categoryTitle) {
       </div>
     </a>
     <div class="sc-text">
-      <span class="sc-eyebrow">${esc(categoryTitle)} · ${esc(name)}</span>
+      <span class="sc-eyebrow">${esc(categoryTitle)} · ${esc(item.source || name)}</span>
       <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
       ${item.description ? `<p class="sc-desc">${esc(item.description)}</p>` : ''}
     </div>
@@ -74,8 +75,7 @@ function buildLightbox() {
     <div class="lb-backdrop"></div>
     <div class="lb-stage" role="dialog" aria-modal="true">
       <button class="lb-close" aria-label="Close">&times;</button>
-      <div class="lb-frame"><iframe allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div>
-      <a class="lb-source" target="_blank" rel="noopener">Open on platform &#8599;</a>
+      <div class="lb-frame"></div>
     </div>`;
   document.body.appendChild(lightbox);
   const close = () => closeLightbox();
@@ -83,23 +83,24 @@ function buildLightbox() {
   lightbox.querySelector('.lb-close').addEventListener('click', close);
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.classList.contains('open')) close(); });
 }
-function openLightbox({ embed, ar, platform, link, caption }) {
-  if (!embed) { window.open(link, '_blank', 'noopener'); return; }
+function openLightbox({ embed, file, ar, platform, link }) {
+  if (!embed && !file) { window.open(link, '_blank', 'noopener'); return; }
   if (!lightbox) buildLightbox();
   const stage = lightbox.querySelector('.lb-stage');
   stage.classList.toggle('vertical', ar.startsWith('9/'));
   stage.dataset.platform = platform;
-  lightbox.querySelector('.lb-frame').style.aspectRatio = ar.replace('/', ' / ');
-  lightbox.querySelector('iframe').src = embed;
-  const src = lightbox.querySelector('.lb-source');
-  src.href = link; src.textContent = `Open on ${platform === 'drive' ? 'Drive' : platform.charAt(0).toUpperCase() + platform.slice(1)} ↗`;
+  const frame = lightbox.querySelector('.lb-frame');
+  frame.style.aspectRatio = ar.replace('/', ' / ');
+  frame.innerHTML = file
+    ? `<video src="${file}" controls autoplay playsinline></video>`            // self-hosted, clean
+    : `<iframe src="${embed}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 function closeLightbox() {
   if (!lightbox) return;
   lightbox.classList.remove('open');
-  lightbox.querySelector('iframe').src = 'about:blank'; // stop playback
+  lightbox.querySelector('.lb-frame').innerHTML = ''; // stop playback (iframe or video)
   document.body.style.overflow = '';
 }
 
@@ -119,7 +120,7 @@ function closeLightbox() {
       if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return; // let new-tab / source open
       e.preventDefault();
       openLightbox({
-        embed: trigger.dataset.embed, ar: trigger.dataset.ar || '16/9',
+        embed: trigger.dataset.embed, file: trigger.dataset.file, ar: trigger.dataset.ar || '16/9',
         platform: trigger.dataset.platform, link: trigger.href,
       });
     });

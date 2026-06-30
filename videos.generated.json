@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T13:48:23.778Z",
+  "generatedAt": "2026-06-30T13:57:45.464Z",
   "categories": [
     {
       "id": "talent",
@@ -9,22 +9,26 @@
         {
           "caption": "Expressive Talent",
           "description": "Fronting a POV skit for Meraki Agency — carrying the whole bit with expressive timing and facial acting, and landing the punchline with energy that keeps people watching to the end.",
+          "source": "",
           "title": "Siapa yang relate? Coba ungkapin isi kepala kalian 🤯 #POV #AgencyLife #MerakiAgency",
           "platform": "tiktok",
           "platformLabel": "TikTok",
           "link": "https://www.tiktok.com/@merakiagency.id/video/7602200743814237448",
           "embed": "https://www.tiktok.com/player/v1/7602200743814237448?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
+          "file": "",
           "thumb": "assets/thumbs/tiktok-7602200743814237448.jpg",
           "ar": "9/16"
         },
         {
           "caption": "Informative Talent",
           "description": "On-camera host for Botomotif, walking viewers through a Lamborghini Urus — delivering the details clearly and naturally so the information stays easy to absorb and genuinely fun to watch.",
+          "source": "",
           "title": "Lamborghini Urus S 4.0 #botomotif #botomotifsupercar #botomotifcollection #lamborghini #lamborghiniurus",
           "platform": "tiktok",
           "platformLabel": "TikTok",
           "link": "https://www.tiktok.com/@botomotif/video/7648977134995868936",
           "embed": "https://www.tiktok.com/player/v1/7648977134995868936?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
+          "file": "",
           "thumb": "assets/thumbs/tiktok-7648977134995868936.jpg",
           "ar": "9/16"
         }
@@ -38,22 +42,26 @@
         {
           "caption": "Cinematic Framing",
           "description": "Corporate profile shoot for PT Hisotex — cinematic camera work with deliberate lighting and movement that gives the brand a premium, authoritative on-screen presence.",
+          "source": "Company Profile",
           "title": "PT HISOTEX",
           "platform": "drive",
           "platformLabel": "Video",
           "link": "https://drive.google.com/file/d/1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI/view",
           "embed": "https://drive.google.com/file/d/1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI/preview",
+          "file": "",
           "thumb": "assets/thumbs/drive-1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI.jpg",
           "ar": "16/9"
         },
         {
           "caption": "Subject Framing",
           "description": "Automotive feature shoot — composing the talent and the car with clean, intentional framing so every shot reads clearly and feels polished straight out of camera.",
+          "source": "",
           "title": "Bawa Ford Mustang ke Tongkrongan Buna… Endingnya Gue Ditelepon Bahlil Lahadalia?! 😳🔥",
           "platform": "youtube",
           "platformLabel": "YouTube",
           "link": "https://www.youtube.com/watch?v=88zaKmRoVHI",
           "embed": "https://www.youtube.com/embed/88zaKmRoVHI?autoplay=1&rel=0",
+          "file": "",
           "thumb": "assets/thumbs/youtube-88zaKmRoVHI.jpg",
           "ar": "16/9"
         }
@@ -67,22 +75,26 @@
         {
           "caption": "Aesthetic Typography",
           "description": "Short-form edit driven by clean, aesthetic typography — kinetic text and tight rhythm tuned to hook viewers in the first second and hold them through the cut.",
+          "source": "",
           "title": "Aesthetic Typography",
           "platform": "instagram",
           "platformLabel": "Reels",
           "link": "https://www.instagram.com/reel/DM97y1dTUvK/",
           "embed": "https://www.instagram.com/reel/DM97y1dTUvK/embed/",
+          "file": "",
           "thumb": "assets/thumbs/instagram-DM97y1dTUvK.jpg",
           "ar": "9/16"
         },
         {
           "caption": "Elegant Shoot + Edit",
           "description": "Shot and edited end-to-end for Botomotif — a Ferrari SF90 piece with an elegant, premium feel carried all the way from framing to the final grade.",
+          "source": "",
           "title": "FS. Ferrari SF90 Spider #ferrari #ferrarisf90 #ferrarisf90spider #ferrariclub #botomotif ",
           "platform": "tiktok",
           "platformLabel": "TikTok",
           "link": "https://www.tiktok.com/@botomotif/video/7538709964748082440",
           "embed": "https://www.tiktok.com/player/v1/7538709964748082440?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
+          "file": "",
           "thumb": "assets/thumbs/tiktok-7538709964748082440.jpg",
           "ar": "9/16"
         }
@@ -96,22 +108,26 @@
         {
           "caption": "Edited for Big Creators",
           "description": "Editing for Edward Halim, a creator with a large subscriber base — keeping a long-form video engaging the whole way through and helping drive strong, lasting views by making it genuinely watchable at length.",
+          "source": "",
           "title": "Nyobain Semua Scam Di Turki!",
           "platform": "youtube",
           "platformLabel": "YouTube",
           "link": "https://www.youtube.com/watch?v=hRiuRIChtJg",
           "embed": "https://www.youtube.com/embed/hRiuRIChtJg?autoplay=1&rel=0",
+          "file": "",
           "thumb": "assets/thumbs/youtube-hRiuRIChtJg.jpg",
           "ar": "16/9"
         },
         {
           "caption": "Clean Vlog Edit",
-          "description": "Long-form vlog edit (VIP Koocester feature) — clean, simple cutting and a relaxed, well-judged pace that keeps the story easy to follow from start to finish.",
+          "description": "Long-form vlog edit (VIP Koocester Car Meet) — clean, simple cutting and a relaxed, well-judged pace that keeps the story easy to follow from start to finish.",
+          "source": "",
           "title": "Di Undang VIP Koocester, Satu Room Sama Gabriel Rey… Mobil 2M Gue Nyempil di Antara Supercar 😳",
           "platform": "youtube",
           "platformLabel": "YouTube",
           "link": "https://www.youtube.com/watch?v=6gUQss9_2ZU",
           "embed": "https://www.youtube.com/embed/6gUQss9_2ZU?autoplay=1&rel=0",
+          "file": "",
           "thumb": "assets/thumbs/youtube-6gUQss9_2ZU.jpg",
           "ar": "16/9"
         }

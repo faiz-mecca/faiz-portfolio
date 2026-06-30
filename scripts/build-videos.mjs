@@ -129,11 +129,13 @@ async function main() {
       items.push({
         caption: v.caption,
         description: v.description || '',
+        source: v.source || '',            // overrides the eyebrow's right-hand label
         title: title || v.caption,
         platform: info.platform,
         platformLabel: info.label,
         link: info.link,
         embed: buildEmbed(info),
+        file: v.file || '',                // self-hosted mp4 (plays clean, no platform UI)
         thumb: thumbOk ? rel : '',
         ar: inferAr(info.platform, v.ar),
       });
