@@ -92,7 +92,8 @@ const inferAr = (platform, override) => override || (platform === 'tiktok' || pl
 /** Inline-player (iframe) URL per platform. All four verified embeddable. */
 function buildEmbed({ platform, id }) {
   if (platform === 'youtube') return `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
-  if (platform === 'tiktok') return `https://www.tiktok.com/embed/v2/${id}`;
+  // player/v1 = clean video-only player (no profile/likes/comments UI)
+  if (platform === 'tiktok') return `https://www.tiktok.com/player/v1/${id}?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0`;
   if (platform === 'instagram') return `https://www.instagram.com/reel/${id}/embed/`;
   if (platform === 'drive') return `https://drive.google.com/file/d/${id}/preview`;
   return '';

@@ -23,31 +23,46 @@ sections.forEach(s => s && navIO.observe(s));
 const PLAY_SVG = '<svg width="18" height="18" viewBox="0 0 16 16"><path d="M4 2l10 6-10 6V2z"/></svg>';
 const esc = (s = '') => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-function cardHTML(item) {
-  const bg = item.thumb ? `--ar:${esc(item.ar)};background-image:url('${esc(item.thumb)}')` : `--ar:${esc(item.ar)}`;
-  const thumbCls = item.thumb ? 'thumb has-img' : 'thumb';
-  return `<a class="vcard" href="${esc(item.link)}" target="_blank" rel="noopener"
-      data-embed="${esc(item.embed)}" data-ar="${esc(item.ar)}" data-platform="${esc(item.platform)}"
-      data-caption="${esc(item.caption)}" title="Play — ${esc(item.title)}">
-    <div class="${thumbCls}" style="${bg}">
-      <span class="ptag">${esc(item.platformLabel)}</span>
-      <div class="play">${PLAY_SVG}</div>
+const platformName = p => p === 'drive' ? 'Drive'
+  : ({ youtube: 'YouTube', tiktok: 'TikTok', instagram: 'Instagram' }[p] || (p.charAt(0).toUpperCase() + p.slice(1)));
+
+// Last word outlined (ghost), like the reference's display titles.
+function ghostTitle(caption) {
+  const words = (caption || '').trim().split(/\s+/);
+  if (words.length <= 1) return esc(words[0] || '');
+  const last = words.pop();
+  return `${esc(words.join(' '))} <span class="sc-ghost">${esc(last)}</span>`;
+}
+
+function showcaseHTML(item, categoryTitle) {
+  const vertical = (item.ar || '16/9').startsWith('9/');
+  const bg = item.thumb ? `background-image:url('${esc(item.thumb)}')` : '';
+  const name = platformName(item.platform);
+  return `<div class="showcase reveal ${vertical ? 'showcase--vertical' : 'showcase--horizontal'}">
+    <a class="sc-media" href="${esc(item.link)}" target="_blank" rel="noopener"
+       data-embed="${esc(item.embed)}" data-ar="${esc(item.ar)}" data-platform="${esc(item.platform)}"
+       title="Play — ${esc(item.title)}">
+      <div class="thumb" style="${bg}">
+        <span class="ptag">${esc(item.platformLabel)}</span>
+        <div class="play">${PLAY_SVG}</div>
+      </div>
+    </a>
+    <div class="sc-text">
+      <span class="sc-eyebrow">${esc(categoryTitle)} · ${esc(name)}</span>
+      <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
+      ${item.description ? `<p class="sc-desc">${esc(item.description)}</p>` : ''}
+      <span class="sc-cta">Watch on ${esc(name)} <span aria-hidden="true">&#8594;</span></span>
     </div>
-    <div class="meta">
-      <div class="vtitle">${esc(item.caption)}</div>
-      ${item.description ? `<p class="vdesc">${esc(item.description)}</p>` : ''}
-    </div>
-  </a>`;
+  </div>`;
 }
 
 function groupHTML(cat) {
-  const vertical = (cat.items[0]?.ar || '16/9').startsWith('9/');
-  return `<div class="vgroup reveal ${vertical ? 'vgroup--vertical' : 'vgroup--horizontal'}">
+  return `<div class="vgroup reveal">
     <div class="vgroup-head">
       <h3>${esc(cat.title)}</h3>
       ${cat.blurb ? `<span class="vgroup-blurb">${esc(cat.blurb)}</span>` : ''}
     </div>
-    <div class="vrow">${cat.items.map(cardHTML).join('')}</div>
+    <div class="showcases">${cat.items.map(it => showcaseHTML(it, cat.title)).join('')}</div>
   </div>`;
 }
 
@@ -100,13 +115,13 @@ function closeLightbox() {
     mount.innerHTML = data.categories.map(groupHTML).join('');
     observeReveals(mount);
     mount.addEventListener('click', e => {
-      const card = e.target.closest('.vcard');
-      if (!card) return;
+      const trigger = e.target.closest('.sc-media');
+      if (!trigger) return;
       if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return; // let new-tab / source open
       e.preventDefault();
       openLightbox({
-        embed: card.dataset.embed, ar: card.dataset.ar || '16/9',
-        platform: card.dataset.platform, link: card.href, caption: card.dataset.caption,
+        embed: trigger.dataset.embed, ar: trigger.dataset.ar || '16/9',
+        platform: trigger.dataset.platform, link: trigger.href,
       });
     });
   } catch (err) {

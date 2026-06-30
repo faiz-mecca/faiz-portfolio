@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T13:17:30.734Z",
+  "generatedAt": "2026-06-30T13:31:17.212Z",
   "categories": [
     {
       "id": "talent",
@@ -13,7 +13,7 @@
           "platform": "tiktok",
           "platformLabel": "TikTok",
           "link": "https://www.tiktok.com/@merakiagency.id/video/7602200743814237448",
-          "embed": "https://www.tiktok.com/embed/v2/7602200743814237448",
+          "embed": "https://www.tiktok.com/player/v1/7602200743814237448?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
           "thumb": "assets/thumbs/tiktok-7602200743814237448.jpg",
           "ar": "9/16"
         },
@@ -24,7 +24,7 @@
           "platform": "tiktok",
           "platformLabel": "TikTok",
           "link": "https://www.tiktok.com/@botomotif/video/7648977134995868936",
-          "embed": "https://www.tiktok.com/embed/v2/7648977134995868936",
+          "embed": "https://www.tiktok.com/player/v1/7648977134995868936?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
           "thumb": "assets/thumbs/tiktok-7648977134995868936.jpg",
           "ar": "9/16"
         }
@@ -82,7 +82,7 @@
           "platform": "tiktok",
           "platformLabel": "TikTok",
           "link": "https://www.tiktok.com/@botomotif/video/7538709964748082440",
-          "embed": "https://www.tiktok.com/embed/v2/7538709964748082440",
+          "embed": "https://www.tiktok.com/player/v1/7538709964748082440?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
           "thumb": "assets/thumbs/tiktok-7538709964748082440.jpg",
           "ar": "9/16"
         }
