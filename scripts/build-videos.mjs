@@ -108,6 +108,47 @@ async function main() {
   for (const cat of source.categories) {
     const items = [];
     for (const v of cat.videos) {
+      // Pair entry (urls array) — produces one item with a nested `videos` array
+      if (Array.isArray(v.urls)) {
+        const videos = [];
+        for (const rawUrl of v.urls) {
+          const info = parseUrl(rawUrl);
+          const rel = `assets/thumbs/${info.platform}-${info.id}.jpg`;
+          const dest = path.join(ROOT, rel);
+          let thumbOk = false;
+          try {
+            const meta = await resolveMeta(info);
+            if (meta.thumbUrl) {
+              const bytes = await download(meta.thumbUrl, dest);
+              thumbOk = true;
+              console.log(`  ok   [${info.platform}] ${v.caption} — ${(bytes / 1024).toFixed(0)}kb`);
+            } else throw new Error('no thumbnail url');
+            ok++;
+          } catch (e) {
+            warn++;
+            if (existsSync(dest)) { thumbOk = true; console.warn(`  keep [${info.platform}] ${v.caption} — reusing cached thumb (${e.message})`); }
+            else console.warn(`  WARN [${info.platform}] ${v.caption} — ${e.message} (card will use gradient fallback)`);
+          }
+          videos.push({
+            platform: info.platform,
+            platformLabel: info.label,
+            link: info.link,
+            embed: buildEmbed(info),
+            file: v.file || '',
+            thumb: thumbOk ? rel : '',
+            ar: inferAr(info.platform, v.ar),
+          });
+        }
+        items.push({
+          caption: v.caption,
+          description: v.description || '',
+          source: v.source || '',
+          videos,                          // paired thumbnails rendered side-by-side
+        });
+        continue;
+      }
+
+      // Single entry (existing behaviour)
       const info = parseUrl(v.url);
       const rel = `assets/thumbs/${info.platform}-${info.id}.jpg`;
       const dest = path.join(ROOT, rel);
@@ -129,13 +170,13 @@ async function main() {
       items.push({
         caption: v.caption,
         description: v.description || '',
-        source: v.source || '',            // overrides the eyebrow's right-hand label
+        source: v.source || '',
         title: title || v.caption,
         platform: info.platform,
         platformLabel: info.label,
         link: info.link,
         embed: buildEmbed(info),
-        file: v.file || '',                // self-hosted mp4 (plays clean, no platform UI)
+        file: v.file || '',
         thumb: thumbOk ? rel : '',
         ar: inferAr(info.platform, v.ar),
       });

@@ -63,6 +63,32 @@ function showcaseHTML(item, categoryTitle) {
 
 // Portrait card: thumbnail on top (height-capped), text below — used for 9/16 categories
 function portraitCardHTML(item, categoryTitle) {
+  // Paired entry: two thumbnails side-by-side, one shared caption + description
+  if (item.videos) {
+    const name = platformName(item.videos[0].platform);
+    const thumbsHTML = item.videos.map(v => {
+      const bg = v.thumb ? `background-image:url('${esc(v.thumb)}')` : '';
+      return `<a class="sc-media" href="${esc(v.link)}" target="_blank" rel="noopener"
+         data-embed="${esc(v.embed)}" data-file="${esc(v.file || '')}"
+         data-ar="${esc(v.ar)}" data-platform="${esc(v.platform)}"
+         title="Play — ${esc(item.caption)}">
+        <div class="thumb portrait-thumb" style="${bg}">
+          <span class="ptag">${esc(v.platformLabel)}</span>
+          <div class="play">${PLAY_SVG}</div>
+        </div>
+      </a>`;
+    }).join('');
+    return `<div class="portrait-card portrait-pair reveal">
+      <div class="portrait-thumbs">${thumbsHTML}</div>
+      <div class="portrait-text">
+        <span class="sc-eyebrow">${esc(categoryTitle)} · ${esc(item.source || name)}</span>
+        <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
+        ${item.description ? `<p class="sc-desc">${esc(item.description)}</p>` : ''}
+      </div>
+    </div>`;
+  }
+
+  // Single entry
   const bg = item.thumb ? `background-image:url('${esc(item.thumb)}')` : '';
   const name = platformName(item.platform);
   return `<div class="portrait-card reveal">

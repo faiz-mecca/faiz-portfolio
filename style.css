@@ -230,12 +230,15 @@ section{ padding: 140px 8vw; position:relative; }
   .lb-close{ top:-40px; }
 }
 
-/* PORTRAIT ROW — 2-col grid, video on top (height-capped), text below */
+/* PORTRAIT ROW — stacked pairs, each pair has 2 thumbs side-by-side + shared description */
 /* Used for Talent + Short Form Edit (both 9/16 vertical videos) */
-.portrait-row{ display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(28px,4vw,60px); }
-.portrait-card{ display:flex; flex-direction:column; align-items:center; }
+.portrait-row{ display:flex; flex-direction:column; gap:clamp(48px,6vw,80px); }
+.portrait-card{ display:flex; flex-direction:column; }
+/* Paired card: two thumbnails in a 2-col inner grid */
+.portrait-thumbs{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(10px,1.5vw,20px); width:100%; }
+.portrait-thumbs .sc-media{ display:flex; justify-content:center; width:100%; }
+.portrait-thumb{ height:min(55vh,420px); aspect-ratio:9/16; width:auto; }
 .portrait-card .sc-media{ display:flex; justify-content:center; width:100%; }
-.portrait-thumb{ height:min(62vh,480px); aspect-ratio:9/16; width:auto; }
 .portrait-text{ width:100%; padding-top:20px; }
 .portrait-card .sc-title{ font-size:clamp(24px,2.4vw,40px); margin:10px 0 12px; }
 .portrait-card .sc-desc{ font-size:13.5px; }
@@ -337,7 +340,8 @@ footer b{ color:var(--gold-light); }
   .about-card{ flex-direction:column; gap:0; }
   .about-profile{ margin-bottom:28px; }
   .about-skills{ width:100%; border-top-color:rgba(255,255,255,0.09); }
-  .portrait-row{ grid-template-columns:1fr; gap:48px; }
+  .portrait-thumbs{ grid-template-columns:1fr; gap:16px; }
+  .portrait-thumb{ height:min(70vw,360px); }
 }
 @media (max-width:760px){
   .about-card{ padding:28px 24px; }
