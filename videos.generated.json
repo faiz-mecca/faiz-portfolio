@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T02:36:31.025Z",
+  "generatedAt": "2026-07-01T03:21:28.212Z",
   "categories": [
     {
       "id": "talent",
@@ -30,6 +30,32 @@
           "embed": "https://www.tiktok.com/player/v1/7648977134995868936?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
           "file": "",
           "thumb": "assets/thumbs/tiktok-7648977134995868936.jpg",
+          "ar": "9/16"
+        },
+        {
+          "caption": "Natural Comedy",
+          "description": "A second POV piece for Meraki Agency — different scene, same read-the-room instinct. The bit works because the reactions feel genuine, not performed.",
+          "source": "",
+          "title": "HUHU! ✋🏻✊🏻✋🏻✊🏻✋🏻✊🏻 Qha qha ini emang bahasanya harus begini ya, Qha qha? Boleh spill realitanya nggak, Qha qha? 🫣✋🏻✊🏻 Adakah disini yang cara komunikasi di agency-nya kayak gini? Spill dong kata-kata khas ala anak ahensi versi kamu🫸🏻 #MerakiAgency #LifeatMeraki #AgencyLife",
+          "platform": "tiktok",
+          "platformLabel": "TikTok",
+          "link": "https://www.tiktok.com/@merakiagency.id/video/7592179223566011669",
+          "embed": "https://www.tiktok.com/player/v1/7592179223566011669?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
+          "file": "",
+          "thumb": "assets/thumbs/tiktok-7592179223566011669.jpg",
+          "ar": "9/16"
+        },
+        {
+          "caption": "Confident Presenter",
+          "description": "Back on camera for Botomotif with a different car — same comfortable delivery that makes technical specs feel like a conversation rather than a spec sheet.",
+          "source": "",
+          "title": "Mercedes-Maybach S500 #botomotif #botomotifsupercar #botomotifcollection #mercedesmaybach #mercedess500",
+          "platform": "tiktok",
+          "platformLabel": "TikTok",
+          "link": "https://www.tiktok.com/@botomotif/video/7648974575451081991",
+          "embed": "https://www.tiktok.com/player/v1/7648974575451081991?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
+          "file": "",
+          "thumb": "assets/thumbs/tiktok-7648974575451081991.jpg",
           "ar": "9/16"
         }
       ]
@@ -96,6 +122,32 @@
           "embed": "https://www.tiktok.com/player/v1/7538709964748082440?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
           "file": "",
           "thumb": "assets/thumbs/tiktok-7538709964748082440.jpg",
+          "ar": "9/16"
+        },
+        {
+          "caption": "Kinetic Type Edit",
+          "description": "A second typographic short-form cut — text movement locked tight to the audio, building visual momentum so the message lands before the viewer has time to scroll past.",
+          "source": "Reels",
+          "title": "BION-BIYEL TETAP PRODUKTIF WALAUPUN JADI INFLUENCE",
+          "platform": "drive",
+          "platformLabel": "Video",
+          "link": "https://drive.google.com/file/d/1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1/view",
+          "embed": "https://drive.google.com/file/d/1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1/preview",
+          "file": "",
+          "thumb": "assets/thumbs/drive-1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1.jpg",
+          "ar": "9/16"
+        },
+        {
+          "caption": "Premium Car Reel",
+          "description": "Another end-to-end shoot and edit for Botomotif — deliberate on-set framing and a grade that elevates the footage into something that feels genuinely polished and high-end.",
+          "source": "",
+          "title": "Audi TT RS Coupe 2.5 TFSI Quattro Sport Edition #botomotif #botomotifsupercar #botomotifcollection #audi #audition #audittrs",
+          "platform": "tiktok",
+          "platformLabel": "TikTok",
+          "link": "https://www.tiktok.com/@botomotif/video/7638535845963648272",
+          "embed": "https://www.tiktok.com/player/v1/7638535845963648272?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
+          "file": "",
+          "thumb": "assets/thumbs/tiktok-7638535845963648272.jpg",
           "ar": "9/16"
         }
       ]
