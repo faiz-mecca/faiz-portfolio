@@ -14,22 +14,29 @@
 <header class="topbar">
   <a href="#hero" class="tb-brand">Faiz Mecca<span>.</span></a>
   <nav class="tb-nav">
-    <a href="#about" data-nav="about">About</a>
-    <a href="#portfolio" data-nav="portfolio">Portfolio</a>
-    <a href="pricing.html" data-nav="pricing">Pricing</a>
+    <a href="#about" data-nav="about" data-i18n="nav_about">About</a>
+    <a href="#portfolio" data-nav="portfolio" data-i18n="nav_portfolio">Portfolio</a>
+    <a href="pricing.html" data-nav="pricing" data-i18n="nav_pricing">Pricing</a>
   </nav>
-  <a href="#contact" class="tb-cta">Contact Me</a>
+  <div class="topbar-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="id">ID</button>
+    </div>
+    <a href="#contact" class="tb-cta" data-i18n="nav_contact">Contact Me</a>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <span class="eyebrow">Content Creator</span>
+  <span class="eyebrow" data-i18n="hero_eyebrow">Content Creator</span>
   <h1 class="display">FAIZ<br><span class="accent">MECCA</span></h1>
   <div class="role-line">
     <div class="bar"></div>
-    <p>I act, I shoot — beauty or cinematic, whatever the story calls for — and I edit it all together myself. My style leans simple and elegant: clean cuts, no clutter, just the story doing the talking.</p>
+    <p data-i18n="hero_bio">I act, I shoot — beauty or cinematic, whatever the story calls for — and I edit it all together myself. My style leans simple and elegant: clean cuts, no clutter, just the story doing the talking.</p>
   </div>
-  <div class="scroll-cue"><div class="line"></div>Scroll</div>
+  <div class="scroll-cue"><div class="line"></div><span data-i18n="scroll_cue">Scroll</span></div>
 </section>
 
 <!-- ABOUT -->
@@ -42,30 +49,30 @@
           <h2 class="about-name">Faiz Mecca</h2>
           <span class="about-badge">&#10003;</span>
         </div>
-        <p class="about-role">Content Creator &middot; Talent &middot; Videographer &middot; Editor</p>
-        <p class="about-bio">I've built real depth across four distinct roles: on-camera talent, cinematographer, short-form editor, and long-form editor. Each one sharpens the others — knowing how to cut makes me more deliberate on set, and being the talent gives me instincts most editors never develop. The result is work that holds together all the way through.</p>
+        <p class="about-role" data-i18n="about_role">Content Creator &middot; Talent &middot; Videographer &middot; Editor</p>
+        <p class="about-bio" data-i18n="about_bio">I've built real depth across four distinct roles: on-camera talent, cinematographer, short-form editor, and long-form editor. Each one sharpens the others — knowing how to cut makes me more deliberate on set, and being the talent gives me instincts most editors never develop. The result is work that holds together all the way through.</p>
       </div>
     </div>
     <div class="about-skills">
       <div class="about-skill">
         <span class="as-num">01</span>
-        <span class="as-name">Talent</span>
-        <span class="as-desc">Relaxed and energetic on camera — comfortable carrying scripted acting or delivering information naturally.</span>
+        <span class="as-name" data-i18n="about_s1">Talent</span>
+        <span class="as-desc" data-i18n="about_s1d">Relaxed and energetic on camera — comfortable carrying scripted acting or delivering information naturally.</span>
       </div>
       <div class="about-skill">
         <span class="as-num">02</span>
-        <span class="as-name">Videographer</span>
-        <span class="as-desc">Cinematic and beauty visuals, shot with deliberate composition, lighting, and movement.</span>
+        <span class="as-name" data-i18n="about_s2">Videographer</span>
+        <span class="as-desc" data-i18n="about_s2d">Cinematic and beauty visuals, shot with deliberate composition, lighting, and movement.</span>
       </div>
       <div class="about-skill">
         <span class="as-num">03</span>
-        <span class="as-name">Short Form Edit</span>
-        <span class="as-desc">Fast, punchy Reels and TikToks built to hook in the first second and hold through the cut.</span>
+        <span class="as-name" data-i18n="about_s3">Short Form Edit</span>
+        <span class="as-desc" data-i18n="about_s3d">Fast, punchy Reels and TikToks built to hook in the first second and hold through the cut.</span>
       </div>
       <div class="about-skill">
         <span class="as-num">04</span>
-        <span class="as-name">Long Form Edit</span>
-        <span class="as-desc">Paced, cohesive YouTube edits that keep attention from start to finish.</span>
+        <span class="as-name" data-i18n="about_s4">Long Form Edit</span>
+        <span class="as-desc" data-i18n="about_s4d">Paced, cohesive YouTube edits that keep attention from start to finish.</span>
       </div>
     </div>
   </div>
@@ -75,10 +82,10 @@
 <section id="portfolio">
   <div class="section-head reveal">
     <div>
-      <span class="section-tag">Portfolio</span>
-      <h2>What I've Made</h2>
+      <span class="section-tag" data-i18n="section_tag_portfolio">Portfolio</span>
+      <h2 data-i18n="portfolio_h2">What I've Made</h2>
     </div>
-    <p class="desc">A mix of work across talent, shooting and editing — click any card to watch it inline.</p>
+    <p class="desc" data-i18n="portfolio_desc">A mix of work across talent, shooting and editing — click any card to watch it inline.</p>
   </div>
   <!-- Rendered from videos.generated.json by script.js (run `npm run build:videos` to refresh) -->
   <div id="portfolio-groups" class="portfolio-groups"></div>
@@ -87,19 +94,19 @@
 <!-- CONTACT -->
 <section class="contact reveal" id="contact">
   <div class="contact-inner">
-    <span class="section-tag">Let's Work</span>
-    <h2 class="contact-title">Start a <span>Project</span></h2>
-    <p class="contact-sub">Pick what you need — I'll get back to you fast on WhatsApp.</p>
-    <p class="contact-label">I want to hire Faiz as a:</p>
+    <span class="section-tag" data-i18n="contact_eyebrow">Let's Work</span>
+    <h2 class="contact-title" data-i18n-html="contact_title_html">Start a <span>Project</span></h2>
+    <p class="contact-sub" data-i18n="contact_sub">Pick what you need — I'll get back to you fast on WhatsApp.</p>
+    <p class="contact-label" data-i18n="contact_label">I want to hire Faiz as a:</p>
     <div class="order-types">
-      <button class="order-btn" data-msg="Halo Faiz, aku tertarik untuk hire kamu sebagai Talent.">Talent</button>
-      <button class="order-btn" data-msg="Halo Faiz, aku tertarik untuk hire kamu sebagai Videographer.">Videographer</button>
-      <button class="order-btn" data-msg="Halo Faiz, aku tertarik untuk pesan jasa Short Form Editing kamu.">Short Edit</button>
-      <button class="order-btn" data-msg="Halo Faiz, aku tertarik untuk pesan jasa Long Form Editing kamu.">Long Edit</button>
+      <button class="order-btn" data-wa-key="wa_talent" data-msg="Hi Faiz, I'm interested in hiring you as Talent.">Talent</button>
+      <button class="order-btn" data-wa-key="wa_video"  data-msg="Hi Faiz, I'm interested in hiring you as a Videographer.">Videographer</button>
+      <button class="order-btn" data-wa-key="wa_short"  data-msg="Hi Faiz, I'm interested in ordering your Short Form Editing service.">Short Edit</button>
+      <button class="order-btn" data-wa-key="wa_long"   data-msg="Hi Faiz, I'm interested in ordering your Long Form Editing service.">Long Edit</button>
     </div>
     <a class="wa-cta" id="waCta" href="https://wa.me/6285162573133" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Chat on WhatsApp
+      <span data-i18n="wa_cta">Chat on WhatsApp</span>
     </a>
   </div>
 </section>
@@ -108,6 +115,7 @@
   <p>&copy; 2026 Faiz Mecca</p>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 
 </body>

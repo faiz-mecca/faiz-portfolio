@@ -50,6 +50,16 @@ section[id]{ scroll-margin-top:104px; }
 }
 .tb-nav a:hover{ color:var(--text); }
 .tb-nav a.active{ color:var(--text); background:rgba(255,255,255,0.08); }
+.topbar-right{ display:flex; align-items:center; gap:12px; }
+.lang-toggle{ display:flex; align-items:center; gap:2px; }
+.lang-btn{
+  background:none; border:none; cursor:pointer;
+  font-family:inherit; font-size:11px; font-weight:700; letter-spacing:1.5px;
+  color:var(--text-dimmer); padding:6px 7px; border-radius:6px; transition:.2s;
+}
+.lang-btn:hover{ color:var(--text); }
+.lang-btn.active{ color:var(--gold); }
+.lang-sep{ color:var(--border); font-size:11px; line-height:1; }
 .tb-cta{
   font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase;
   color:var(--text); text-decoration:none; padding:11px 22px; border-radius:100px;
@@ -57,6 +67,9 @@ section[id]{ scroll-margin-top:104px; }
   transition:.25s; white-space:nowrap;
 }
 .tb-cta:hover{ background:var(--gold); color:var(--ink); border-color:var(--gold); }
+
+/* Offset fixed topbar when scrolling to anchor links */
+#hero, #about, #portfolio, #contact, #pricing{ scroll-margin-top:80px; }
 
 /* HERO */
 .hero{

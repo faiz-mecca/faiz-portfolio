@@ -1,3 +1,15 @@
+// ---- scroll restoration: always start at top on load/refresh ----
+history.scrollRestoration = 'manual';
+
+// Hash navigation from another page (e.g. pricing → index.html#contact):
+// dynamic content changes page height after load, so we re-scroll after a tick.
+window.addEventListener('load', () => {
+  if (location.hash) {
+    const el = document.querySelector(location.hash);
+    if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+  }
+});
+
 // ---- reveal-on-scroll (also used for portfolio groups added later) ----
 const revealIO = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealIO.unobserve(e.target); } });

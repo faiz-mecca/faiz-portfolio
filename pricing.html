@@ -14,76 +14,89 @@
 <header class="topbar">
   <a href="index.html#hero" class="tb-brand">Faiz Mecca<span>.</span></a>
   <nav class="tb-nav">
-    <a href="index.html#about" data-nav="about">About</a>
-    <a href="index.html#portfolio" data-nav="portfolio">Portfolio</a>
-    <a href="pricing.html" data-nav="pricing" class="active">Pricing</a>
+    <a href="index.html#about" data-nav="about" data-i18n="nav_about">About</a>
+    <a href="index.html#portfolio" data-nav="portfolio" data-i18n="nav_portfolio">Portfolio</a>
+    <a href="pricing.html" data-nav="pricing" class="active" data-i18n="nav_pricing">Pricing</a>
   </nav>
-  <a href="index.html#contact" class="tb-cta">Contact Me</a>
+  <div class="topbar-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="id">ID</button>
+    </div>
+    <a href="index.html#contact" class="tb-cta" data-i18n="nav_contact">Contact Me</a>
+  </div>
 </header>
 
 <!-- PRICELIST -->
 <section class="pricing pricing-page" id="pricing">
   <div class="section-head reveal">
     <div>
-      <span class="section-tag">Pricelist</span>
-      <h2>Long Form Video Editor</h2>
+      <span class="section-tag" data-i18n="pricing_eyebrow">Pricelist</span>
+      <h2 data-i18n="pricing_h2">Long Form Video Editor</h2>
     </div>
-    <p class="desc">Editing · Motion Graphics · Sound Design</p>
+    <p class="desc" data-i18n="pricing_desc">Editing · Motion Graphics · Sound Design</p>
   </div>
 
   <div class="cards reveal">
     <div class="card">
-      <h3>Standard</h3>
-      <div class="cdesc">Clean cuts, strong pacing, tight sound — no motion graphics.</div>
-      <div class="tbl-head"><span>FINAL DURATION</span><span>PRICE</span></div>
+      <h3 data-i18n="std_name">Standard</h3>
+      <div class="cdesc" data-i18n="std_desc">Clean cuts, strong pacing, tight sound — no motion graphics.</div>
+      <div class="tbl-head"><span data-i18n="tbl_dur">FINAL DURATION</span><span data-i18n="tbl_price">PRICE</span></div>
       <div class="row"><span class="dur">0–15 min</span><span class="price">Rp 250.000</span></div>
       <div class="row"><span class="dur">16–30 min</span><span class="price">Rp 500.000</span></div>
       <div class="row"><span class="dur">31–45 min</span><span class="price">Rp 750.000</span></div>
-      <div class="row"><span class="dur">46–60 min</span><span class="price">Rp 900.000</span></div>
-      <div class="custom-row">60 min+ → custom quote</div>
-      <div class="feat"><span class="check">✓</span> Cut, trim & pacing</div>
-      <div class="feat"><span class="check">✓</span> Sound design & mixing</div>
-      <div class="feat"><span class="check">✓</span> Subtitles</div>
-      <div class="feat"><span class="check">✓</span> 1× revision</div>
-      <div class="feat off"><span class="cross">✕</span> Motion graphics</div>
+      <div class="row"><span class="dur">46–60 min</span><span class="price">Rp 850.000</span></div>
+      <div class="custom-row" data-i18n="custom_row">60 min+ → custom quote</div>
+      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_cut">Cut, trim &amp; pacing</span></div>
+      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_sound">Sound design &amp; mixing</span></div>
+      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_subs">Subtitles</span></div>
+      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_rev1">1× revision</span></div>
+      <div class="feat off"><span class="cross">✕</span> <span data-i18n="feat_mg">Motion graphics</span></div>
     </div>
 
     <div class="card premium">
-      <span class="pill">MOST POPULAR</span>
-      <h3>Premium</h3>
-      <div class="cdesc">Full package — motion graphics included for content that stands out.</div>
-      <div class="tbl-head"><span>FINAL DURATION</span><span>PRICE</span></div>
+      <span class="pill" data-i18n="prem_pill">MOST POPULAR</span>
+      <h3 data-i18n="prem_name">Premium</h3>
+      <div class="cdesc" data-i18n="prem_desc">Full package — motion graphics included for content that stands out.</div>
+      <div class="tbl-head"><span data-i18n="tbl_dur">FINAL DURATION</span><span data-i18n="tbl_price">PRICE</span></div>
       <div class="row"><span class="dur">0–15 min</span><span class="price">Rp 350.000</span></div>
       <div class="row"><span class="dur">16–30 min</span><span class="price">Rp 600.000</span></div>
       <div class="row"><span class="dur">31–45 min</span><span class="price">Rp 850.000</span></div>
-      <div class="row"><span class="dur">46–60 min</span><span class="price">Rp 1.000.000</span></div>
-      <div class="custom-row">60 min+ → custom quote</div>
-      <div class="feat"><span class="check">✓</span> Cut, trim & pacing</div>
-      <div class="feat"><span class="check">✓</span> Sound design & mixing</div>
-      <div class="feat"><span class="check">✓</span> Subtitles</div>
-      <div class="feat"><span class="check">✓</span> 2× revisions</div>
-      <div class="feat"><span class="check">✓</span> Motion graphics</div>
+      <div class="row"><span class="dur">46–60 min</span><span class="price">Rp 950.000</span></div>
+      <div class="custom-row" data-i18n="custom_row">60 min+ → custom quote</div>
+      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_cut">Cut, trim &amp; pacing</span></div>
+      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_sound">Sound design &amp; mixing</span></div>
+      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_subs">Subtitles</span></div>
+      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_rev2">2× revisions</span></div>
+      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_mg">Motion graphics</span></div>
     </div>
   </div>
 
   <div class="addons reveal">
-    <div class="addon"><div class="name">Extra Revision</div><div class="amt">Rp 75.000 <span>/ revision</span></div></div>
-    <div class="addon"><div class="name">Express &lt; 48 Hours</div><div class="amt">+20% <span>of total</span></div></div>
+    <div class="addon"><div class="name" data-i18n="addon_rev">Extra Revision</div><div class="amt">Rp 50.000 <span data-i18n="addon_rev_u">/ revision</span></div></div>
+    <div class="addon"><div class="name" data-i18n="addon_exp">Express &lt; 48 Hours</div><div class="amt">+20% <span data-i18n="addon_exp_u">of total</span></div></div>
   </div>
 
   <div class="retainer-card reveal">
     <div class="retainer-top">
       <div>
-        <h3>Monthly Plan</h3>
-        <div class="rdesc">All retainer plans use <b>Premium</b> service (46–60 min tier) — motion graphics included. Better rates + priority queue.</div>
+        <h3 data-i18n="ret_title">Monthly Plan</h3>
+        <div class="rdesc" data-i18n-html="ret_desc_html">All retainer plans use <b>Premium</b> service (46–60 min tier) — motion graphics included. Better rates + priority queue.</div>
       </div>
-      <div class="billed-pill">Billed at <b>end of month</b></div>
+      <div class="billed-pill" data-i18n-html="ret_billed_html">Billed at <b>end of month</b></div>
     </div>
     <table class="retainer">
-      <tr><th>VOLUME</th><th>REGULAR PRICE</th><th>RETAINER PRICE</th><th>SAVE</th><th style="text-align:right">TOTAL / MONTH</th></tr>
-      <tr><td class="vol">4 videos</td><td>Rp 1.000.000</td><td>Rp 900.000</td><td class="save"><span class="save-badge">10%</span></td><td class="total">Rp 3.600.000</td></tr>
-      <tr><td class="vol">6 videos</td><td>Rp 1.000.000</td><td>Rp 875.000</td><td class="save"><span class="save-badge">12.5%</span></td><td class="total">Rp 5.250.000</td></tr>
-      <tr><td class="vol">8 videos</td><td>Rp 1.000.000</td><td>Rp 850.000</td><td class="save"><span class="save-badge">15%</span></td><td class="total">Rp 6.800.000</td></tr>
+      <tr>
+        <th data-i18n="ret_vol">VOLUME</th>
+        <th data-i18n="ret_reg">REGULAR PRICE</th>
+        <th data-i18n="ret_ret">RETAINER PRICE</th>
+        <th data-i18n="ret_save">SAVE</th>
+        <th style="text-align:right" data-i18n="ret_total">TOTAL / MONTH</th>
+      </tr>
+      <tr><td class="vol" data-i18n="ret_4">4 videos</td><td>Rp 950.000</td><td>Rp 855.000</td><td class="save"><span class="save-badge">10%</span></td><td class="total">Rp 3.420.000</td></tr>
+      <tr><td class="vol" data-i18n="ret_6">6 videos</td><td>Rp 950.000</td><td>Rp 830.000</td><td class="save"><span class="save-badge">12.5%</span></td><td class="total">Rp 4.980.000</td></tr>
+      <tr><td class="vol" data-i18n="ret_8">8 videos</td><td>Rp 950.000</td><td>Rp 810.000</td><td class="save"><span class="save-badge">15%</span></td><td class="total">Rp 6.480.000</td></tr>
     </table>
   </div>
 </section>
@@ -92,6 +105,7 @@
   <p>&copy; 2026 Faiz Mecca</p>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 
 </body>
