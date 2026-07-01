@@ -61,13 +61,39 @@ function showcaseHTML(item, categoryTitle) {
   </div>`;
 }
 
+// 2-up grid card for short-form vertical videos
+function gridCardHTML(item, categoryTitle) {
+  const bg = item.thumb ? `background-image:url('${esc(item.thumb)}')` : '';
+  const name = platformName(item.platform);
+  return `<div class="grid-card reveal">
+    <a class="sc-media" href="${esc(item.link)}" target="_blank" rel="noopener"
+       data-embed="${esc(item.embed)}" data-file="${esc(item.file || '')}"
+       data-ar="${esc(item.ar)}" data-platform="${esc(item.platform)}"
+       title="Play — ${esc(item.title)}">
+      <div class="thumb grid-thumb" style="${bg}">
+        <span class="ptag">${esc(item.platformLabel)}</span>
+        <div class="play">${PLAY_SVG}</div>
+      </div>
+    </a>
+    <div class="grid-card-info">
+      <span class="sc-eyebrow">${esc(categoryTitle)} · ${esc(item.source || name)}</span>
+      <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
+      ${item.description ? `<p class="sc-desc">${esc(item.description)}</p>` : ''}
+    </div>
+  </div>`;
+}
+
 function groupHTML(cat) {
+  const useGrid = cat.id === 'short-form-edit';
   return `<div class="vgroup reveal">
     <div class="vgroup-head">
       <h3>${esc(cat.title)}</h3>
       ${cat.blurb ? `<span class="vgroup-blurb">${esc(cat.blurb)}</span>` : ''}
     </div>
-    <div class="showcases">${cat.items.map(it => showcaseHTML(it, cat.title)).join('')}</div>
+    ${useGrid
+      ? `<div class="grid-2up">${cat.items.map(it => gridCardHTML(it, cat.title)).join('')}</div>`
+      : `<div class="showcases">${cat.items.map(it => showcaseHTML(it, cat.title)).join('')}</div>`
+    }
   </div>`;
 }
 
@@ -107,6 +133,20 @@ function closeLightbox() {
   lightbox.classList.remove('open');
   lightbox.querySelector('.lb-frame').innerHTML = ''; // stop playback (iframe or video)
   document.body.style.overflow = '';
+}
+
+// ---- contact: order type selector updates WA link ----
+const WA_BASE = 'https://wa.me/6285162573133';
+const orderBtns = document.querySelectorAll('.order-btn');
+const waCta = document.getElementById('waCta');
+if (orderBtns.length && waCta) {
+  orderBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      orderBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      waCta.href = `${WA_BASE}?text=${encodeURIComponent(btn.dataset.msg)}`;
+    });
+  });
 }
 
 // ---- render Portfolio from generated data ----
