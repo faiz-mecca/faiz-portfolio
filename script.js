@@ -61,21 +61,21 @@ function showcaseHTML(item, categoryTitle) {
   </div>`;
 }
 
-// 2-up grid card for short-form vertical videos
-function gridCardHTML(item, categoryTitle) {
+// Portrait mini-showcase card: thumbnail left, text right — used for 9/16 categories
+function portraitCardHTML(item, categoryTitle) {
   const bg = item.thumb ? `background-image:url('${esc(item.thumb)}')` : '';
   const name = platformName(item.platform);
-  return `<div class="grid-card reveal">
+  return `<div class="portrait-card reveal">
     <a class="sc-media" href="${esc(item.link)}" target="_blank" rel="noopener"
        data-embed="${esc(item.embed)}" data-file="${esc(item.file || '')}"
        data-ar="${esc(item.ar)}" data-platform="${esc(item.platform)}"
        title="Play — ${esc(item.title)}">
-      <div class="thumb grid-thumb" style="${bg}">
+      <div class="thumb portrait-thumb" style="${bg}">
         <span class="ptag">${esc(item.platformLabel)}</span>
         <div class="play">${PLAY_SVG}</div>
       </div>
     </a>
-    <div class="grid-card-info">
+    <div class="portrait-text">
       <span class="sc-eyebrow">${esc(categoryTitle)} · ${esc(item.source || name)}</span>
       <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
       ${item.description ? `<p class="sc-desc">${esc(item.description)}</p>` : ''}
@@ -84,14 +84,14 @@ function gridCardHTML(item, categoryTitle) {
 }
 
 function groupHTML(cat) {
-  const useGrid = cat.id === 'short-form-edit';
+  const usePortrait = cat.id === 'short-form-edit' || cat.id === 'talent';
   return `<div class="vgroup reveal">
     <div class="vgroup-head">
       <h3>${esc(cat.title)}</h3>
       ${cat.blurb ? `<span class="vgroup-blurb">${esc(cat.blurb)}</span>` : ''}
     </div>
-    ${useGrid
-      ? `<div class="grid-2up">${cat.items.map(it => gridCardHTML(it, cat.title)).join('')}</div>`
+    ${usePortrait
+      ? `<div class="portrait-row">${cat.items.map(it => portraitCardHTML(it, cat.title)).join('')}</div>`
       : `<div class="showcases">${cat.items.map(it => showcaseHTML(it, cat.title)).join('')}</div>`
     }
   </div>`;
