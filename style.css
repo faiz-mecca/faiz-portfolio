@@ -230,18 +230,18 @@ section{ padding: 140px 8vw; position:relative; }
   .lb-close{ top:-40px; }
 }
 
-/* PORTRAIT ROW — zigzag: thumbs left on odd, right on even; text fills the other side */
+/* PORTRAIT ROW — zigzag: odd=thumbs left, even=thumbs right; cards hug content width */
 /* Used for Talent + Short Form Edit (both 9/16 vertical videos) */
-.portrait-row{ display:flex; flex-direction:column; gap:clamp(48px,6vw,80px); }
-.portrait-card{ display:flex; flex-direction:row; align-items:center; gap:clamp(24px,4vw,52px); }
-.portrait-card:nth-child(even){ flex-direction:row-reverse; }
+.portrait-row{ display:flex; flex-direction:column; gap:clamp(48px,6vw,80px); align-items:flex-start; }
+.portrait-card{ display:flex; flex-direction:row; align-items:center; gap:clamp(20px,3vw,44px); }
+.portrait-card:nth-child(even){ flex-direction:row-reverse; align-self:flex-end; }
 /* Paired card: two thumbnails in a 2-col inner grid */
 .portrait-thumbs{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(8px,1vw,14px); flex-shrink:0; }
 .portrait-thumbs .sc-media{ display:flex; justify-content:center; }
 .portrait-thumb{ height:min(44vh,340px); aspect-ratio:9/16; width:auto; }
 .portrait-card .sc-media{ display:flex; justify-content:center; width:100%; }
-.portrait-text{ flex:1; min-width:0; padding-top:0; }
-.portrait-card .sc-title{ font-size:clamp(22px,2.2vw,38px); margin:10px 0 12px; }
+.portrait-text{ width:clamp(200px,26vw,320px); flex-shrink:0; padding-top:0; }
+.portrait-card .sc-title{ font-size:clamp(20px,2vw,34px); margin:10px 0 12px; }
 .portrait-card .sc-desc{ font-size:13.5px; line-height:1.7; }
 
 /* CONTACT */
