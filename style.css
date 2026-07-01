@@ -230,14 +230,15 @@ section{ padding: 140px 8vw; position:relative; }
   .lb-close{ top:-40px; }
 }
 
-/* PORTRAIT ROW — 2-col grid, each card is mini-showcase (thumb left, text right) */
+/* PORTRAIT ROW — 2-col grid, video on top (height-capped), text below */
 /* Used for Talent + Short Form Edit (both 9/16 vertical videos) */
-.portrait-row{ display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(24px,4vw,56px); }
-.portrait-card{ display:flex; align-items:flex-start; gap:20px; }
-.portrait-thumb{ flex-shrink:0; width:38%; aspect-ratio:9/16; }
-.portrait-text{ flex:1; min-width:0; padding-top:4px; }
-.portrait-card .sc-title{ font-size:clamp(22px,2.2vw,36px); margin:10px 0 12px; }
-.portrait-card .sc-desc{ font-size:13px; }
+.portrait-row{ display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(28px,4vw,60px); }
+.portrait-card{ display:flex; flex-direction:column; align-items:center; }
+.portrait-card .sc-media{ display:flex; justify-content:center; width:100%; }
+.portrait-thumb{ height:min(62vh,480px); aspect-ratio:9/16; width:auto; }
+.portrait-text{ width:100%; padding-top:20px; }
+.portrait-card .sc-title{ font-size:clamp(24px,2.4vw,40px); margin:10px 0 12px; }
+.portrait-card .sc-desc{ font-size:13.5px; }
 
 /* CONTACT */
 .contact{
@@ -351,6 +352,5 @@ footer b{ color:var(--gold-light); }
 @media (max-width:520px){
   .tb-brand{ font-size:16px; }
   .tb-nav a{ padding:7px 9px; font-size:11px; }
-  .portrait-card{ flex-direction:column; }
-  .portrait-thumb{ width:55%; max-width:180px; }
+  .portrait-thumb{ height:min(55vh,360px); }
 }

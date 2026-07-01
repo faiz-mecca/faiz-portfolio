@@ -61,7 +61,7 @@ function showcaseHTML(item, categoryTitle) {
   </div>`;
 }
 
-// Portrait mini-showcase card: thumbnail left, text right — used for 9/16 categories
+// Portrait card: thumbnail on top (height-capped), text below — used for 9/16 categories
 function portraitCardHTML(item, categoryTitle) {
   const bg = item.thumb ? `background-image:url('${esc(item.thumb)}')` : '';
   const name = platformName(item.platform);
