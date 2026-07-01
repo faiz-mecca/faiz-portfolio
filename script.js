@@ -10,6 +10,23 @@ window.addEventListener('load', () => {
   }
 });
 
+// ---- topbar: hide on scroll down, show on scroll up ----
+const topbar = document.querySelector('.topbar');
+if (topbar) {
+  let lastY = window.scrollY;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y <= 0) {
+      topbar.classList.remove('tb-hidden');
+    } else if (y > lastY) {
+      topbar.classList.add('tb-hidden');
+    } else if (y < lastY) {
+      topbar.classList.remove('tb-hidden');
+    }
+    lastY = y;
+  }, { passive: true });
+}
+
 // ---- reveal-on-scroll (also used for portfolio groups added later) ----
 const revealIO = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealIO.unobserve(e.target); } });
