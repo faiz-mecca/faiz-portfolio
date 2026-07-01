@@ -5,19 +5,24 @@ const revealIO = new IntersectionObserver((entries) => {
 const observeReveals = (scope = document) => scope.querySelectorAll('.reveal:not(.in)').forEach(el => revealIO.observe(el));
 observeReveals();
 
-// ---- nav dot active state ----
-const sections = ['hero', 'about', 'portfolio', 'pricing'].map(id => document.getElementById(id));
-const dots = document.querySelectorAll('nav.dots a');
-const navIO = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const idx = sections.indexOf(e.target);
-      dots.forEach(d => d.classList.remove('active'));
-      if (dots[idx]) dots[idx].classList.add('active');
-    }
+// ---- top-bar active link (highlights the section in view; only on pages with in-page sections) ----
+const navLinks = document.querySelectorAll('.tb-nav a[data-nav]');
+if (navLinks.length) {
+  const linkFor = id => document.querySelector(`.tb-nav a[data-nav="${id}"]`);
+  const navIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const link = linkFor(e.target.id);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { threshold: 0.5 });
+  ['about', 'portfolio'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) navIO.observe(el);
   });
-}, { threshold: 0.5 });
-sections.forEach(s => s && navIO.observe(s));
+}
 
 // ---- helpers ----
 const PLAY_SVG = '<svg width="18" height="18" viewBox="0 0 16 16"><path d="M4 2l10 6-10 6V2z"/></svg>';
