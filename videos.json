@@ -56,12 +56,14 @@
           "caption": "Aesthetic Typography",
           "ar": "9/16",
           "source": "Reels",
+          "tier": "Standard",
           "description": "Two Reels that lead with type — text movement locked to the audio so the rhythm hooks you before you even realize it.",
           "description_id": "Dua Reels yang dipimpin tipografi — gerakan teks dikunci ke audio biar ritme-nya udah nge-hook sebelum kamu sadar."
         },
         {
           "urls": ["https://www.tiktok.com/@botomotif/video/7538709964748082440", "https://www.tiktok.com/@botomotif/video/7638535845963648272"],
           "caption": "Elegant Shoot + Edit",
+          "tier": "Standard",
           "description": "Two pieces for Botomotif from shot to final cut — deliberate framing on set and a grade that makes each car look exactly as premium as it should.",
           "description_id": "Dua project buat Botomotif dari syuting sampai cut final — framing yang niat di set dan grade yang bikin setiap mobil keliatan sepremium yang semestinya."
         }
@@ -77,12 +79,14 @@
         {
           "url": "https://www.youtube.com/watch?v=hRiuRIChtJg",
           "caption": "Edited for Big Creators",
+          "tier": "Premium",
           "description": "Editing for Edward Halim — keeping a long YouTube video actually watchable the whole way through, so the views don't just come in, they stick.",
           "description_id": "Edit buat Edward Halim — bikin video YouTube panjang tetap enak ditonton dari awal sampai akhir, biar viewsnya nggak cuma datang tapi juga betah."
         },
         {
           "url": "https://www.youtube.com/watch?v=6gUQss9_2ZU",
           "caption": "Clean Vlog Edit",
+          "tier": "Standard",
           "description": "Vlog edit for VIP Koocester Car Meet — clean cuts, relaxed pace, story that's easy to follow all the way through.",
           "description_id": "Edit vlog VIP Koocester Car Meet — potongan bersih, pacing santai, cerita yang gampang diikutin dari awal sampai habis."
         }

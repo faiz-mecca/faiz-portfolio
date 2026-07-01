@@ -60,6 +60,9 @@ const esc = (s = '') => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', 
 const platformName = p => p === 'drive' ? 'Drive'
   : ({ youtube: 'YouTube', tiktok: 'TikTok', instagram: 'Instagram' }[p] || (p.charAt(0).toUpperCase() + p.slice(1)));
 
+// Self-hosted (Drive) videos have no external link — never expose one.
+const mediaHref = link => link ? esc(link) : 'javascript:void(0)';
+
 // Last word outlined (ghost), like the reference's display titles.
 function ghostTitle(caption) {
   const words = (caption || '').trim().split(/\s+/);
@@ -73,7 +76,7 @@ function showcaseHTML(item, cat) {
   const bg = item.thumb ? `background-image:url('${esc(item.thumb)}')` : '';
   const name = platformName(item.platform);
   return `<div class="showcase reveal ${vertical ? 'showcase--vertical' : 'showcase--horizontal'}">
-    <a class="sc-media" href="${esc(item.link)}" target="_blank" rel="noopener"
+    <a class="sc-media" href="${mediaHref(item.link)}"${item.link ? ' target="_blank" rel="noopener"' : ''}
        data-embed="${esc(item.embed)}" data-file="${esc(item.file || '')}"
        data-ar="${esc(item.ar)}" data-platform="${esc(item.platform)}"
        title="Play — ${esc(item.title)}">
@@ -83,7 +86,7 @@ function showcaseHTML(item, cat) {
       </div>
     </a>
     <div class="sc-text">
-      ${eyebrow(cat.title, cat.title_id, item.source || name)}
+      ${eyebrow(cat.title, cat.title_id, item.source || name, item.tier)}
       <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
       ${descHTML(item)}
     </div>
@@ -101,9 +104,11 @@ function descHTML(item) {
   return `<p class="sc-desc" data-desc-en="${esc(en)}" data-desc-id="${esc(id)}">${esc(cur)}</p>`;
 }
 
-function eyebrow(catTitleEn, catTitleId, platformOrSource) {
-  const cur = getLang() === 'id' ? catTitleId : catTitleEn;
-  return `<span class="sc-eyebrow" data-cat-en="${esc(catTitleEn)}" data-cat-id="${esc(catTitleId)}" data-platform="${esc(platformOrSource)}">${esc(cur)} · ${esc(platformOrSource)}</span>`;
+function eyebrow(catTitleEn, catTitleId, platformOrSource, tier) {
+  const catEn = tier ? `${catTitleEn} ${tier}` : catTitleEn;
+  const catId = tier ? `${catTitleId} ${tier}` : catTitleId;
+  const cur = getLang() === 'id' ? catId : catEn;
+  return `<span class="sc-eyebrow" data-cat-en="${esc(catEn)}" data-cat-id="${esc(catId)}" data-platform="${esc(platformOrSource)}">${esc(cur)} · ${esc(platformOrSource)}</span>`;
 }
 
 function portraitCardHTML(item, cat) {
@@ -112,7 +117,7 @@ function portraitCardHTML(item, cat) {
     const name = platformName(item.videos[0].platform);
     const thumbsHTML = item.videos.map(v => {
       const bg = v.thumb ? `background-image:url('${esc(v.thumb)}')` : '';
-      return `<a class="sc-media" href="${esc(v.link)}" target="_blank" rel="noopener"
+      return `<a class="sc-media" href="${mediaHref(v.link)}"${v.link ? ' target="_blank" rel="noopener"' : ''}
          data-embed="${esc(v.embed)}" data-file="${esc(v.file || '')}"
          data-ar="${esc(v.ar)}" data-platform="${esc(v.platform)}"
          title="Play — ${esc(item.caption)}">
@@ -125,7 +130,7 @@ function portraitCardHTML(item, cat) {
     return `<div class="portrait-card portrait-pair reveal">
       <div class="portrait-thumbs">${thumbsHTML}</div>
       <div class="portrait-text">
-        ${eyebrow(cat.title, cat.title_id, item.source || name)}
+        ${eyebrow(cat.title, cat.title_id, item.source || name, item.tier)}
         <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
         ${descHTML(item)}
       </div>
@@ -136,7 +141,7 @@ function portraitCardHTML(item, cat) {
   const bg = item.thumb ? `background-image:url('${esc(item.thumb)}')` : '';
   const name = platformName(item.platform);
   return `<div class="portrait-card reveal">
-    <a class="sc-media" href="${esc(item.link)}" target="_blank" rel="noopener"
+    <a class="sc-media" href="${mediaHref(item.link)}"${item.link ? ' target="_blank" rel="noopener"' : ''}
        data-embed="${esc(item.embed)}" data-file="${esc(item.file || '')}"
        data-ar="${esc(item.ar)}" data-platform="${esc(item.platform)}"
        title="Play — ${esc(item.title)}">
@@ -146,7 +151,7 @@ function portraitCardHTML(item, cat) {
       </div>
     </a>
     <div class="sc-text">
-      ${eyebrow(cat.title, cat.title_id, item.source || name)}
+      ${eyebrow(cat.title, cat.title_id, item.source || name, item.tier)}
       <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
       ${descHTML(item)}
     </div>

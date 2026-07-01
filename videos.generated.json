@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T04:31:50.292Z",
+  "generatedAt": "2026-07-01T07:40:11.193Z",
   "categories": [
     {
       "id": "talent",
@@ -13,6 +13,7 @@
           "description": "Two POV skits for Meraki Agency, different scenes but the same sharp instinct — expressive timing and genuine reactions that sell every bit right to the punchline.",
           "description_id": "Dua skit POV buat Meraki Agency — scene beda tapi instingnya sama tajamnya. Timing ekspresif dan reaksi yang natural ngejual setiap bit sampai ke punchline-nya.",
           "source": "",
+          "tier": "",
           "videos": [
             {
               "platform": "tiktok",
@@ -39,6 +40,7 @@
           "description": "Hosting for Botomotif across two different cars — keeping things clear and natural enough that it actually feels like a conversation, not a spec sheet.",
           "description_id": "Host buat Botomotif di dua mobil berbeda — penyampaian yang clear dan natural bikin detail-detailnya gampang masuk dan enak diikutin, bukan kayak baca brosur.",
           "source": "",
+          "tier": "",
           "videos": [
             {
               "platform": "tiktok",
@@ -74,6 +76,7 @@
           "description": "Corporate profile shoot for PT Hisotex — deliberate lighting, movement, and framing that makes the brand feel premium on screen.",
           "description_id": "Syuting profil korporat buat PT Hisotex — pencahayaan, gerakan, dan framing yang disengaja biar brand-nya keliatan premium di layar.",
           "source": "Company Profile",
+          "tier": "",
           "title": "PT HISOTEX",
           "platform": "drive",
           "platformLabel": "Video",
@@ -88,6 +91,7 @@
           "description": "Automotive feature shoot — every frame composed so the car and talent both read clean and look polished right out of the camera.",
           "description_id": "Syuting fitur otomotif — setiap frame dikomposisiin biar mobilnya dan talent-nya keliatan bersih dan polished langsung dari kamera.",
           "source": "",
+          "tier": "",
           "title": "Bawa Ford Mustang ke Tongkrongan Buna… Endingnya Gue Ditelepon Bahlil Lahadalia?! 😳🔥",
           "platform": "youtube",
           "platformLabel": "YouTube",
@@ -111,22 +115,23 @@
           "description": "Two Reels that lead with type — text movement locked to the audio so the rhythm hooks you before you even realize it.",
           "description_id": "Dua Reels yang dipimpin tipografi — gerakan teks dikunci ke audio biar ritme-nya udah nge-hook sebelum kamu sadar.",
           "source": "Reels",
+          "tier": "Standard",
           "videos": [
             {
               "platform": "drive",
               "platformLabel": "Video",
-              "link": "https://drive.google.com/file/d/1qeg7Xwwkb7gX93uNdDDqTTpYGXFhQoaa/view",
-              "embed": "https://drive.google.com/file/d/1qeg7Xwwkb7gX93uNdDDqTTpYGXFhQoaa/preview",
-              "file": "",
+              "link": "",
+              "embed": "",
+              "file": "assets/videos/drive-1qeg7Xwwkb7gX93uNdDDqTTpYGXFhQoaa.mp4",
               "thumb": "assets/thumbs/drive-1qeg7Xwwkb7gX93uNdDDqTTpYGXFhQoaa.jpg",
               "ar": "9/16"
             },
             {
               "platform": "drive",
               "platformLabel": "Video",
-              "link": "https://drive.google.com/file/d/1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1/view",
-              "embed": "https://drive.google.com/file/d/1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1/preview",
-              "file": "",
+              "link": "",
+              "embed": "",
+              "file": "assets/videos/drive-1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1.mp4",
               "thumb": "assets/thumbs/drive-1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1.jpg",
               "ar": "9/16"
             }
@@ -137,6 +142,7 @@
           "description": "Two pieces for Botomotif from shot to final cut — deliberate framing on set and a grade that makes each car look exactly as premium as it should.",
           "description_id": "Dua project buat Botomotif dari syuting sampai cut final — framing yang niat di set dan grade yang bikin setiap mobil keliatan sepremium yang semestinya.",
           "source": "",
+          "tier": "Standard",
           "videos": [
             {
               "platform": "tiktok",
@@ -172,6 +178,7 @@
           "description": "Editing for Edward Halim — keeping a long YouTube video actually watchable the whole way through, so the views don't just come in, they stick.",
           "description_id": "Edit buat Edward Halim — bikin video YouTube panjang tetap enak ditonton dari awal sampai akhir, biar viewsnya nggak cuma datang tapi juga betah.",
           "source": "",
+          "tier": "Premium",
           "title": "Nyobain Semua Scam Di Turki!",
           "platform": "youtube",
           "platformLabel": "YouTube",
@@ -186,6 +193,7 @@
           "description": "Vlog edit for VIP Koocester Car Meet — clean cuts, relaxed pace, story that's easy to follow all the way through.",
           "description_id": "Edit vlog VIP Koocester Car Meet — potongan bersih, pacing santai, cerita yang gampang diikutin dari awal sampai habis.",
           "source": "",
+          "tier": "Standard",
           "title": "Di Undang VIP Koocester, Satu Room Sama Gabriel Rey… Mobil 2M Gue Nyempil di Antara Supercar 😳",
           "platform": "youtube",
           "platformLabel": "YouTube",

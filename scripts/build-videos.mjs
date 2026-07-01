@@ -18,6 +18,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const THUMB_DIR = path.join(ROOT, 'assets', 'thumbs');
+const VIDEO_DIR = path.join(ROOT, 'assets', 'videos');
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36';
 // Instagram strips og:* tags for browser-like UAs; it only serves them to crawlers.
 const FB_UA = 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)';
@@ -87,6 +88,30 @@ async function download(url, dest) {
   return buf.length;
 }
 
+/**
+ * Google Drive serves an HTML "can't scan for viruses" confirmation page instead of
+ * the file for some videos. Self-hosting (rather than the /preview iframe) is what
+ * lets us fully control composition and controls, so we try a couple of URL forms
+ * and bail out to the iframe embed if Drive won't hand over raw video bytes.
+ */
+async function downloadDriveVideo(id, dest) {
+  const urls = [
+    `https://drive.google.com/uc?export=download&id=${id}`,
+    `https://drive.google.com/uc?export=download&confirm=t&id=${id}`,
+  ];
+  for (const url of urls) {
+    const res = await fetch(url, { headers: { 'User-Agent': UA, Referer: 'https://drive.google.com/' }, redirect: 'follow' });
+    const ct = res.headers.get('content-type') || '';
+    if (res.ok && ct.startsWith('video/')) {
+      const buf = Buffer.from(await res.arrayBuffer());
+      if (buf.length < 10240) throw new Error(`video too small (${buf.length}b) — likely blocked`);
+      await writeFile(dest, buf);
+      return buf.length;
+    }
+  }
+  throw new Error('drive would not serve raw video (too large / confirm page)');
+}
+
 const inferAr = (platform, override) => override || (platform === 'tiktok' || platform === 'instagram' ? '9/16' : '16/9');
 
 /** Inline-player (iframe) URL per platform. All four verified embeddable. */
@@ -99,8 +124,28 @@ function buildEmbed({ platform, id }) {
   return '';
 }
 
+/** Self-host Drive videos so the site never depends on Google's own preview UI (no
+ *  composition quirks, no "open in Drive" affordance). Falls back to the iframe
+ *  embed if Drive won't serve raw bytes. */
+async function resolveDriveFile(info, existingFile, caption) {
+  if (existingFile) return existingFile;
+  if (info.platform !== 'drive') return '';
+  const rel = `assets/videos/drive-${info.id}.mp4`;
+  const dest = path.join(ROOT, rel);
+  if (existsSync(dest)) return rel;
+  try {
+    const bytes = await downloadDriveVideo(info.id, dest);
+    console.log(`  ok   [drive-video] ${caption} — ${(bytes / 1024 / 1024).toFixed(1)}mb`);
+    return rel;
+  } catch (e) {
+    console.warn(`  WARN [drive-video] ${caption} — ${e.message} (falling back to Drive iframe)`);
+    return '';
+  }
+}
+
 async function main() {
   await mkdir(THUMB_DIR, { recursive: true });
+  await mkdir(VIDEO_DIR, { recursive: true });
   const source = JSON.parse(await readFile(path.join(ROOT, 'videos.json'), 'utf8'));
   const out = { generatedAt: new Date().toISOString(), categories: [] };
   let ok = 0, warn = 0;
@@ -129,12 +174,13 @@ async function main() {
             if (existsSync(dest)) { thumbOk = true; console.warn(`  keep [${info.platform}] ${v.caption} — reusing cached thumb (${e.message})`); }
             else console.warn(`  WARN [${info.platform}] ${v.caption} — ${e.message} (card will use gradient fallback)`);
           }
+          const file = await resolveDriveFile(info, v.file, v.caption);
           videos.push({
             platform: info.platform,
             platformLabel: info.label,
-            link: info.link,
-            embed: buildEmbed(info),
-            file: v.file || '',
+            link: file ? '' : info.link,
+            embed: file ? '' : buildEmbed(info),
+            file,
             thumb: thumbOk ? rel : '',
             ar: inferAr(info.platform, v.ar),
           });
@@ -144,6 +190,7 @@ async function main() {
           description: v.description || '',
           description_id: v.description_id || '',
           source: v.source || '',
+          tier: v.tier || '',
           videos,                          // paired thumbnails rendered side-by-side
         });
         continue;
@@ -168,17 +215,19 @@ async function main() {
         if (existsSync(dest)) { thumbOk = true; console.warn(`  keep [${info.platform}] ${v.caption} — reusing cached thumb (${e.message})`); }
         else console.warn(`  WARN [${info.platform}] ${v.caption} — ${e.message} (card will use gradient fallback)`);
       }
+      const file = await resolveDriveFile(info, v.file, v.caption);
       items.push({
         caption: v.caption,
         description: v.description || '',
         description_id: v.description_id || '',
         source: v.source || '',
+        tier: v.tier || '',
         title: title || v.caption,
         platform: info.platform,
         platformLabel: info.label,
-        link: info.link,
-        embed: buildEmbed(info),
-        file: v.file || '',
+        link: file ? '' : info.link,
+        embed: file ? '' : buildEmbed(info),
+        file,
         thumb: thumbOk ? rel : '',
         ar: inferAr(info.platform, v.ar),
       });
