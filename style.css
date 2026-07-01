@@ -230,18 +230,19 @@ section{ padding: 140px 8vw; position:relative; }
   .lb-close{ top:-40px; }
 }
 
-/* PORTRAIT ROW — stacked pairs, each pair has 2 thumbs side-by-side + shared description */
+/* PORTRAIT ROW — zigzag: thumbs left on odd, right on even; text fills the other side */
 /* Used for Talent + Short Form Edit (both 9/16 vertical videos) */
 .portrait-row{ display:flex; flex-direction:column; gap:clamp(48px,6vw,80px); }
-.portrait-card{ display:flex; flex-direction:column; }
+.portrait-card{ display:flex; flex-direction:row; align-items:center; gap:clamp(24px,4vw,52px); }
+.portrait-card:nth-child(even){ flex-direction:row-reverse; }
 /* Paired card: two thumbnails in a 2-col inner grid */
-.portrait-thumbs{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(10px,1.5vw,20px); width:100%; }
-.portrait-thumbs .sc-media{ display:flex; justify-content:center; width:100%; }
-.portrait-thumb{ height:min(55vh,420px); aspect-ratio:9/16; width:auto; }
+.portrait-thumbs{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(8px,1vw,14px); flex-shrink:0; }
+.portrait-thumbs .sc-media{ display:flex; justify-content:center; }
+.portrait-thumb{ height:min(44vh,340px); aspect-ratio:9/16; width:auto; }
 .portrait-card .sc-media{ display:flex; justify-content:center; width:100%; }
-.portrait-text{ width:100%; padding-top:20px; }
-.portrait-card .sc-title{ font-size:clamp(24px,2.4vw,40px); margin:10px 0 12px; }
-.portrait-card .sc-desc{ font-size:13.5px; }
+.portrait-text{ flex:1; min-width:0; padding-top:0; }
+.portrait-card .sc-title{ font-size:clamp(22px,2.2vw,38px); margin:10px 0 12px; }
+.portrait-card .sc-desc{ font-size:13.5px; line-height:1.7; }
 
 /* CONTACT */
 .contact{
@@ -340,8 +341,9 @@ footer b{ color:var(--gold-light); }
   .about-card{ flex-direction:column; gap:0; }
   .about-profile{ margin-bottom:28px; }
   .about-skills{ width:100%; border-top-color:rgba(255,255,255,0.09); }
-  .portrait-thumbs{ grid-template-columns:1fr; gap:16px; }
-  .portrait-thumb{ height:min(70vw,360px); }
+  .portrait-card, .portrait-card:nth-child(even){ flex-direction:column; }
+  .portrait-thumbs{ width:100%; }
+  .portrait-thumb{ height:min(52vw,280px); }
 }
 @media (max-width:760px){
   .about-card{ padding:28px 24px; }
