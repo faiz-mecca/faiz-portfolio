@@ -377,9 +377,15 @@ footer b{ color:var(--gold-light); }
   .about-card{ padding:28px 24px; }
   .about-profile{ flex-direction:column; gap:16px; }
   section{ padding:90px 6vw; }
-  .pricing-page{ padding-top:150px; }
-  .topbar{ padding:10px 10px 10px 20px; gap:10px; }
-  .tb-cta{ display:none; }
+  .pricing-page{ padding-top:170px; }
+  .topbar{
+    flex-wrap:wrap; row-gap:8px; padding:12px 14px 12px 20px; gap:10px;
+    border-radius:24px; top:12px;
+  }
+  .tb-brand{ order:1; }
+  .topbar-right{ order:2; }
+  .tb-nav{ order:3; flex-basis:100%; justify-content:center; gap:2px; }
+  .tb-cta{ padding:9px 16px; font-size:11px; }
   .tb-nav a{ padding:8px 12px; letter-spacing:1px; }
   .contact-title{ letter-spacing:-1px; }
 }
