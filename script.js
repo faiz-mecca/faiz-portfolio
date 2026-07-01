@@ -51,7 +51,7 @@ function ghostTitle(caption) {
   return `${esc(words.join(' '))} <span class="sc-ghost">${esc(last)}</span>`;
 }
 
-function showcaseHTML(item, categoryTitle) {
+function showcaseHTML(item, cat) {
   const vertical = (item.ar || '16/9').startsWith('9/');
   const bg = item.thumb ? `background-image:url('${esc(item.thumb)}')` : '';
   const name = platformName(item.platform);
@@ -66,15 +66,30 @@ function showcaseHTML(item, categoryTitle) {
       </div>
     </a>
     <div class="sc-text">
-      <span class="sc-eyebrow">${esc(categoryTitle)} · ${esc(item.source || name)}</span>
+      ${eyebrow(cat.title, cat.title_id, item.source || name)}
       <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
-      ${item.description ? `<p class="sc-desc">${esc(item.description)}</p>` : ''}
+      ${descHTML(item)}
     </div>
   </div>`;
 }
 
 // Portrait card: thumbnail on top (height-capped), text below — used for 9/16 categories
-function portraitCardHTML(item, categoryTitle) {
+function getLang() { return localStorage.getItem('lang') || 'en'; }
+
+function descHTML(item) {
+  const en = item.description || '';
+  const id = item.description_id || en;
+  if (!en) return '';
+  const cur = getLang() === 'id' ? id : en;
+  return `<p class="sc-desc" data-desc-en="${esc(en)}" data-desc-id="${esc(id)}">${esc(cur)}</p>`;
+}
+
+function eyebrow(catTitleEn, catTitleId, platformOrSource) {
+  const cur = getLang() === 'id' ? catTitleId : catTitleEn;
+  return `<span class="sc-eyebrow" data-cat-en="${esc(catTitleEn)}" data-cat-id="${esc(catTitleId)}" data-platform="${esc(platformOrSource)}">${esc(cur)} · ${esc(platformOrSource)}</span>`;
+}
+
+function portraitCardHTML(item, cat) {
   // Paired entry: two thumbnails side-by-side, one shared caption + description
   if (item.videos) {
     const name = platformName(item.videos[0].platform);
@@ -93,9 +108,9 @@ function portraitCardHTML(item, categoryTitle) {
     return `<div class="portrait-card portrait-pair reveal">
       <div class="portrait-thumbs">${thumbsHTML}</div>
       <div class="portrait-text">
-        <span class="sc-eyebrow">${esc(categoryTitle)} · ${esc(item.source || name)}</span>
+        ${eyebrow(cat.title, cat.title_id, item.source || name)}
         <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
-        ${item.description ? `<p class="sc-desc">${esc(item.description)}</p>` : ''}
+        ${descHTML(item)}
       </div>
     </div>`;
   }
@@ -113,24 +128,27 @@ function portraitCardHTML(item, categoryTitle) {
         <div class="play">${PLAY_SVG}</div>
       </div>
     </a>
-    <div class="portrait-text">
-      <span class="sc-eyebrow">${esc(categoryTitle)} · ${esc(item.source || name)}</span>
+    <div class="sc-text">
+      ${eyebrow(cat.title, cat.title_id, item.source || name)}
       <h3 class="sc-title">${ghostTitle(item.caption)}</h3>
-      ${item.description ? `<p class="sc-desc">${esc(item.description)}</p>` : ''}
+      ${descHTML(item)}
     </div>
   </div>`;
 }
 
 function groupHTML(cat) {
   const usePortrait = cat.id === 'short-form-edit' || cat.id === 'talent';
+  const lang = getLang();
+  const title = lang === 'id' ? (cat.title_id || cat.title) : cat.title;
+  const blurb = lang === 'id' ? (cat.blurb_id || cat.blurb) : cat.blurb;
   return `<div class="vgroup reveal">
     <div class="vgroup-head">
-      <h3>${esc(cat.title)}</h3>
-      ${cat.blurb ? `<span class="vgroup-blurb">${esc(cat.blurb)}</span>` : ''}
+      <h3 data-title-en="${esc(cat.title)}" data-title-id="${esc(cat.title_id || cat.title)}">${esc(title)}</h3>
+      ${cat.blurb ? `<span class="vgroup-blurb" data-blurb-en="${esc(cat.blurb)}" data-blurb-id="${esc(cat.blurb_id || cat.blurb)}">${esc(blurb)}</span>` : ''}
     </div>
     ${usePortrait
-      ? `<div class="portrait-row">${cat.items.map(it => portraitCardHTML(it, cat.title)).join('')}</div>`
-      : `<div class="showcases">${cat.items.map(it => showcaseHTML(it, cat.title)).join('')}</div>`
+      ? `<div class="portrait-row">${cat.items.map(it => portraitCardHTML(it, cat)).join('')}</div>`
+      : `<div class="showcases">${cat.items.map(it => showcaseHTML(it, cat)).join('')}</div>`
     }
   </div>`;
 }

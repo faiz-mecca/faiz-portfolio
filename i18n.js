@@ -1,26 +1,21 @@
 const TRANSLATIONS = {
   en: {
-    // nav
     nav_about: 'About', nav_portfolio: 'Portfolio', nav_pricing: 'Pricing', nav_contact: 'Contact Me',
-    // hero
     hero_eyebrow: 'Content Creator',
-    hero_bio: 'I act, I shoot — beauty or cinematic, whatever the story calls for — and I edit it all together myself. My style leans simple and elegant: clean cuts, no clutter, just the story doing the talking.',
+    hero_bio: "I'm in front of the camera, behind it, and in the edit — sometimes all three on the same project. My style is clean and simple: no clutter, just the story landing the way it should.",
     scroll_cue: 'Scroll',
-    // about
     about_role: 'Content Creator · Talent · Videographer · Editor',
-    about_bio: "I've built real depth across four distinct roles: on-camera talent, cinematographer, short-form editor, and long-form editor. Each one sharpens the others — knowing how to cut makes me more deliberate on set, and being the talent gives me instincts most editors never develop. The result is work that holds together all the way through.",
-    about_s1: 'Talent',        about_s1d: 'Relaxed and energetic on camera — comfortable carrying scripted acting or delivering information naturally.',
-    about_s2: 'Videographer',  about_s2d: 'Cinematic and beauty visuals, shot with deliberate composition, lighting, and movement.',
-    about_s3: 'Short Form Edit', about_s3d: 'Fast, punchy Reels and TikToks built to hook in the first second and hold through the cut.',
-    about_s4: 'Long Form Edit', about_s4d: 'Paced, cohesive YouTube edits that keep attention from start to finish.',
-    // portfolio
+    about_bio: "I do four things: go on camera, shoot, cut short-form, and cut long-form. They all feed each other — being in front of the lens makes me a sharper editor, and thinking like an editor makes me more deliberate on set. Everything ends up holding together.",
+    about_s1: 'Talent',         about_s1d: "Comfortable in front of the lens whether it's a scripted bit or talking straight to camera — either way it comes out natural.",
+    about_s2: 'Videographer',   about_s2d: 'Beauty and cinematic shots, framed with intention — lighting, movement, and composition that actually serve the story.',
+    about_s3: 'Short Form Edit', about_s3d: "Reels and TikToks that grab in the first second and don't let go — built for scroll-stopping, not just watching.",
+    about_s4: 'Long Form Edit', about_s4d: 'YouTube edits that actually hold attention the whole way through — paced properly, cut clean.',
     section_tag_portfolio: 'Portfolio',
     portfolio_h2: "What I've Made",
-    portfolio_desc: 'A mix of work across talent, shooting and editing — click any card to watch it inline.',
-    // contact
+    portfolio_desc: "A bit of everything — talent, shooting, editing. Click any card to play it right here.",
     contact_eyebrow: "Let's Work",
     contact_title_html: 'Start a <span>Project</span>',
-    contact_sub: "Pick what you need — I'll get back to you fast on WhatsApp.",
+    contact_sub: "Pick what fits — I'll reply quick on WhatsApp.",
     contact_label: 'I want to hire Faiz as a:',
     btn_talent: 'Talent', btn_video: 'Videographer', btn_short: 'Short Edit', btn_long: 'Long Edit',
     wa_cta: 'Chat on WhatsApp',
@@ -28,7 +23,6 @@ const TRANSLATIONS = {
     wa_video:  "Hi Faiz, I'm interested in hiring you as a Videographer.",
     wa_short:  "Hi Faiz, I'm interested in ordering your Short Form Editing service.",
     wa_long:   "Hi Faiz, I'm interested in ordering your Long Form Editing service.",
-    // pricing page
     pricing_eyebrow: 'Pricelist',
     pricing_h2: 'Long Form Video Editor',
     pricing_desc: 'Editing · Motion Graphics · Sound Design',
@@ -47,27 +41,22 @@ const TRANSLATIONS = {
     ret_4: '4 videos', ret_6: '6 videos', ret_8: '8 videos',
   },
   id: {
-    // nav
     nav_about: 'Tentang', nav_portfolio: 'Portofolio', nav_pricing: 'Harga', nav_contact: 'Hubungi Aku',
-    // hero
     hero_eyebrow: 'Kreator Konten',
-    hero_bio: 'Aku akting, aku syuting — beauty atau sinematik, apapun yang ceritanya butuhkan — dan aku edit semuanya sendiri. Gayaku simpel dan elegan: potongan bersih, tanpa noise, biarkan cerita yang berbicara.',
+    hero_bio: 'Aku bisa ada di depan kamera, di belakangnya, dan di edit suite — kadang ketiganya dalam satu project. Gayaku clean dan simpel: nggak ribet, biarkan ceritanya yang ngomong.',
     scroll_cue: 'Gulir',
-    // about
     about_role: 'Kreator Konten · Talent · Videografer · Editor',
-    about_bio: 'Aku punya kedalaman nyata di empat peran berbeda: talent di depan kamera, sinematografer, editor short-form, dan editor long-form. Setiap peran mempertajam yang lain — tahu cara cut membuatku lebih terencana saat syuting, dan pengalaman jadi talent memberi insting yang jarang dimiliki editor lain. Hasilnya adalah karya yang solid dari awal sampai akhir.',
-    about_s1: 'Talent',        about_s1d: 'Santai dan berenergi di depan kamera — nyaman membawakan akting terskrip maupun menyampaikan informasi secara natural.',
-    about_s2: 'Videografer',   about_s2d: 'Visual sinematik dan beauty, dishot dengan komposisi, pencahayaan, dan gerakan yang terencana.',
-    about_s3: 'Short Form Edit', about_s3d: 'Reels dan TikTok yang cepat dan tajam, dibangun untuk hook di detik pertama dan menahan penonton sampai akhir.',
-    about_s4: 'Long Form Edit', about_s4d: 'Edit YouTube yang teratur dan kohesif, menjaga perhatian penonton dari awal sampai akhir.',
-    // portfolio
+    about_bio: 'Ada empat hal yang aku lakuin: tampil di kamera, syuting, edit short-form, dan edit long-form. Semuanya saling mengisi — pengalaman jadi talent bikin editing-ku lebih tajam, dan cara berpikirnya bikin aku lebih sadar saat syuting. Hasilnya? Karya yang solid dari awal sampai akhir.',
+    about_s1: 'Talent',         about_s1d: 'Nyaman di depan kamera, baik itu akting terskrip atau ngobrol langsung ke kamera — semuanya keluar natural.',
+    about_s2: 'Videografer',    about_s2d: 'Shot beauty dan sinematik yang diframe dengan niat — pencahayaan, gerakan, dan komposisi yang beneran serve ceritanya.',
+    about_s3: 'Short Form Edit', about_s3d: 'Reels dan TikTok yang langsung nangkep di detik pertama dan nggak dibiarkan skip — dibuat untuk berhenti scroll, bukan cuma ditonton.',
+    about_s4: 'Long Form Edit', about_s4d: 'Edit YouTube yang beneran bikin penonton betah sampai habis — pacing pas, potongan bersih.',
     section_tag_portfolio: 'Portofolio',
     portfolio_h2: 'Yang Sudah Aku Buat',
-    portfolio_desc: 'Campuran karya lintas talent, syuting, dan editing — klik kartu manapun untuk menontonnya langsung di sini.',
-    // contact
+    portfolio_desc: 'Semuanya ada — talent, syuting, editing. Klik kartu manapun buat nonton langsung di sini.',
     contact_eyebrow: 'Ayo Kerja Sama',
     contact_title_html: 'Mulai <span>Proyek</span>',
-    contact_sub: 'Pilih yang kamu butuhkan — aku akan balas cepat di WhatsApp.',
+    contact_sub: 'Pilih yang sesuai — aku balas cepat di WhatsApp.',
     contact_label: 'Aku mau hire Faiz sebagai:',
     btn_talent: 'Talent', btn_video: 'Videografer', btn_short: 'Edit Pendek', btn_long: 'Edit Panjang',
     wa_cta: 'Chat di WhatsApp',
@@ -75,7 +64,6 @@ const TRANSLATIONS = {
     wa_video:  'Halo Faiz, aku tertarik untuk hire kamu sebagai Videographer.',
     wa_short:  'Halo Faiz, aku tertarik untuk pesan jasa Short Form Editing kamu.',
     wa_long:   'Halo Faiz, aku tertarik untuk pesan jasa Long Form Editing kamu.',
-    // pricing page
     pricing_eyebrow: 'Daftar Harga',
     pricing_h2: 'Editor Video Long Form',
     pricing_desc: 'Editing · Motion Graphics · Sound Design',
@@ -99,19 +87,17 @@ function applyLang(lang) {
   const t = TRANSLATIONS[lang];
   if (!t) return;
 
-  // Plain text nodes
+  // Static HTML elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const v = t[el.dataset.i18n];
     if (v !== undefined) el.textContent = v;
   });
-
-  // HTML nodes (contain tags like <span>, <b>)
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     const v = t[el.dataset.i18nHtml];
     if (v !== undefined) el.innerHTML = v;
   });
 
-  // WA order buttons: update data-msg + label
+  // WA order buttons
   const waKeys = { wa_talent: 'btn_talent', wa_video: 'btn_video', wa_short: 'btn_short', wa_long: 'btn_long' };
   document.querySelectorAll('.order-btn[data-wa-key]').forEach(btn => {
     const msgKey = btn.dataset.waKey;
@@ -120,7 +106,26 @@ function applyLang(lang) {
     if (lblKey && t[lblKey]) btn.textContent = t[lblKey];
   });
 
-  // Toggle button active state
+  // Dynamically-rendered portfolio: descriptions
+  document.querySelectorAll('[data-desc-en]').forEach(el => {
+    el.textContent = lang === 'id' && el.dataset.descId ? el.dataset.descId : el.dataset.descEn;
+  });
+
+  // Dynamically-rendered portfolio: eyebrow category names
+  document.querySelectorAll('.sc-eyebrow[data-cat-en]').forEach(el => {
+    const cat = lang === 'id' ? el.dataset.catId : el.dataset.catEn;
+    el.textContent = cat + ' · ' + el.dataset.platform;
+  });
+
+  // Dynamically-rendered portfolio: group titles and blurbs
+  document.querySelectorAll('.vgroup-head h3[data-title-en]').forEach(el => {
+    el.textContent = lang === 'id' ? el.dataset.titleId : el.dataset.titleEn;
+  });
+  document.querySelectorAll('.vgroup-blurb[data-blurb-en]').forEach(el => {
+    el.textContent = lang === 'id' ? el.dataset.blurbId : el.dataset.blurbEn;
+  });
+
+  // Toggle button state
   document.querySelectorAll('.lang-btn').forEach(b =>
     b.classList.toggle('active', b.dataset.lang === lang)
   );
@@ -130,12 +135,10 @@ function applyLang(lang) {
 }
 
 function initLang() {
-  const saved = localStorage.getItem('lang') || 'en';
-  applyLang(saved);
+  applyLang(localStorage.getItem('lang') || 'en');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Wire toggle buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => applyLang(btn.dataset.lang));
   });

@@ -142,6 +142,7 @@ async function main() {
         items.push({
           caption: v.caption,
           description: v.description || '',
+          description_id: v.description_id || '',
           source: v.source || '',
           videos,                          // paired thumbnails rendered side-by-side
         });
@@ -170,6 +171,7 @@ async function main() {
       items.push({
         caption: v.caption,
         description: v.description || '',
+        description_id: v.description_id || '',
         source: v.source || '',
         title: title || v.caption,
         platform: info.platform,
@@ -181,7 +183,7 @@ async function main() {
         ar: inferAr(info.platform, v.ar),
       });
     }
-    out.categories.push({ id: cat.id, title: cat.title, blurb: cat.blurb || '', items });
+    out.categories.push({ id: cat.id, title: cat.title, title_id: cat.title_id || cat.title, blurb: cat.blurb || '', blurb_id: cat.blurb_id || '', items });
   }
 
   await writeFile(path.join(ROOT, 'videos.generated.json'), JSON.stringify(out, null, 2) + '\n');
