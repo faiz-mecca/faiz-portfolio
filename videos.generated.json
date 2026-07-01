@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T03:21:28.212Z",
+  "generatedAt": "2026-07-01T03:29:21.196Z",
   "categories": [
     {
       "id": "talent",
@@ -20,6 +20,19 @@
           "ar": "9/16"
         },
         {
+          "caption": "Expressive Talent",
+          "description": "A second POV piece for Meraki Agency — different scene, same read-the-room instinct. The bit lands because the reactions feel genuine rather than played up.",
+          "source": "",
+          "title": "HUHU! ✋🏻✊🏻✋🏻✊🏻✋🏻✊🏻 Qha qha ini emang bahasanya harus begini ya, Qha qha? Boleh spill realitanya nggak, Qha qha? 🫣✋🏻✊🏻 Adakah disini yang cara komunikasi di agency-nya kayak gini? Spill dong kata-kata khas ala anak ahensi versi kamu🫸🏻 #MerakiAgency #LifeatMeraki #AgencyLife",
+          "platform": "tiktok",
+          "platformLabel": "TikTok",
+          "link": "https://www.tiktok.com/@merakiagency.id/video/7592179223566011669",
+          "embed": "https://www.tiktok.com/player/v1/7592179223566011669?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
+          "file": "",
+          "thumb": "assets/thumbs/tiktok-7592179223566011669.jpg",
+          "ar": "9/16"
+        },
+        {
           "caption": "Informative Talent",
           "description": "On-camera host for Botomotif, walking viewers through a Lamborghini Urus — delivering the details clearly and naturally so the information stays easy to absorb and genuinely fun to watch.",
           "source": "",
@@ -33,21 +46,8 @@
           "ar": "9/16"
         },
         {
-          "caption": "Natural Comedy",
-          "description": "A second POV piece for Meraki Agency — different scene, same read-the-room instinct. The bit works because the reactions feel genuine, not performed.",
-          "source": "",
-          "title": "HUHU! ✋🏻✊🏻✋🏻✊🏻✋🏻✊🏻 Qha qha ini emang bahasanya harus begini ya, Qha qha? Boleh spill realitanya nggak, Qha qha? 🫣✋🏻✊🏻 Adakah disini yang cara komunikasi di agency-nya kayak gini? Spill dong kata-kata khas ala anak ahensi versi kamu🫸🏻 #MerakiAgency #LifeatMeraki #AgencyLife",
-          "platform": "tiktok",
-          "platformLabel": "TikTok",
-          "link": "https://www.tiktok.com/@merakiagency.id/video/7592179223566011669",
-          "embed": "https://www.tiktok.com/player/v1/7592179223566011669?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
-          "file": "",
-          "thumb": "assets/thumbs/tiktok-7592179223566011669.jpg",
-          "ar": "9/16"
-        },
-        {
-          "caption": "Confident Presenter",
-          "description": "Back on camera for Botomotif with a different car — same comfortable delivery that makes technical specs feel like a conversation rather than a spec sheet.",
+          "caption": "Informative Talent",
+          "description": "Back on camera for Botomotif with a different car — same relaxed delivery that makes technical specs feel like a conversation rather than a rundown.",
           "source": "",
           "title": "Mercedes-Maybach S500 #botomotif #botomotifsupercar #botomotifcollection #mercedesmaybach #mercedess500",
           "platform": "tiktok",
@@ -112,6 +112,19 @@
           "ar": "9/16"
         },
         {
+          "caption": "Aesthetic Typography",
+          "description": "A second typographic cut — text movement locked tight to the audio, building visual momentum frame by frame so the message lands before the viewer scrolls past.",
+          "source": "Reels",
+          "title": "BION-BIYEL TETAP PRODUKTIF WALAUPUN JADI INFLUENCE",
+          "platform": "drive",
+          "platformLabel": "Video",
+          "link": "https://drive.google.com/file/d/1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1/view",
+          "embed": "https://drive.google.com/file/d/1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1/preview",
+          "file": "",
+          "thumb": "assets/thumbs/drive-1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1.jpg",
+          "ar": "9/16"
+        },
+        {
           "caption": "Elegant Shoot + Edit",
           "description": "Shot and edited end-to-end for Botomotif — a Ferrari SF90 piece with an elegant, premium feel carried all the way from framing to the final grade.",
           "source": "",
@@ -125,21 +138,8 @@
           "ar": "9/16"
         },
         {
-          "caption": "Kinetic Type Edit",
-          "description": "A second typographic short-form cut — text movement locked tight to the audio, building visual momentum so the message lands before the viewer has time to scroll past.",
-          "source": "Reels",
-          "title": "BION-BIYEL TETAP PRODUKTIF WALAUPUN JADI INFLUENCE",
-          "platform": "drive",
-          "platformLabel": "Video",
-          "link": "https://drive.google.com/file/d/1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1/view",
-          "embed": "https://drive.google.com/file/d/1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1/preview",
-          "file": "",
-          "thumb": "assets/thumbs/drive-1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1.jpg",
-          "ar": "9/16"
-        },
-        {
-          "caption": "Premium Car Reel",
-          "description": "Another end-to-end shoot and edit for Botomotif — deliberate on-set framing and a grade that elevates the footage into something that feels genuinely polished and high-end.",
+          "caption": "Elegant Shoot + Edit",
+          "description": "Another end-to-end piece for Botomotif — different car, same deliberate framing on set and a grade that makes the footage feel genuinely polished and high-end.",
           "source": "",
           "title": "Audi TT RS Coupe 2.5 TFSI Quattro Sport Edition #botomotif #botomotifsupercar #botomotifcollection #audi #audition #audittrs",
           "platform": "tiktok",
