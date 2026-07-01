@@ -339,7 +339,8 @@ footer{ padding:32px 8vw; text-align:center; color:var(--text-dimmer); font-size
 .retainer-top .rdesc b{ color:var(--gold-light); }
 .billed-pill{ background:#241c18; border:1px solid var(--border); color:#b0a49c; font-size:11px; padding:7px 14px; border-radius:20px; white-space:nowrap; }
 .billed-pill b{ color:var(--gold-light); }
-table.retainer{ width:100%; border-collapse:collapse; margin-top:10px; }
+.table-scroll{ overflow-x:auto; -webkit-overflow-scrolling:touch; margin-top:10px; }
+table.retainer{ width:100%; min-width:560px; border-collapse:collapse; }
 table.retainer th{ text-align:left; color:#8a7c74; font-size:10px; font-weight:700; letter-spacing:1px; padding-bottom:10px; border-bottom:1px solid var(--border); }
 table.retainer td{ padding:14px 8px; border-bottom:1px solid #2e241f; font-size:14px; color:#d8cdc6; transition:background .2s; }
 table.retainer tbody tr:hover td{ background:rgba(255,255,255,.04); }
@@ -390,6 +391,7 @@ footer b{ color:var(--gold-light); }
   .tb-cta{ padding:9px 16px; font-size:11px; }
   .tb-nav a{ padding:8px 12px; letter-spacing:1px; }
   .contact-title{ letter-spacing:-1px; }
+  .retainer-card{ padding:24px 20px; }
 }
 @media (max-width:520px){
   .tb-brand{ font-size:16px; }
