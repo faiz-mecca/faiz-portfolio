@@ -346,6 +346,23 @@ table.retainer td.save{ text-align:right; }
 .save-badge{ background:#2f2410; color:var(--gold-light); font-size:11px; font-weight:700; padding:3px 10px; border-radius:10px; }
 table.retainer td.total{ text-align:right; font-weight:700; color:var(--gold-light); font-size:15px; }
 
+.pricing-sub{ margin-top:56px; }
+.pricing-sub:first-of-type{ margin-top:0; }
+.pricing-sub + .pricing-sub{ border-top:1px solid var(--border); padding-top:56px; }
+.pricing-sub-head{ margin-bottom:28px; }
+.pricing-sub-tag{ font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); }
+.pricing-sub-desc{ color:var(--text-dim); font-size:14px; margin-top:6px; }
+.sf-price-display{ font-size:38px; font-weight:700; color:var(--gold-light); letter-spacing:-1px; padding:18px 0 2px; }
+.sf-price-note{ font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:#8a7c74; margin-bottom:16px; }
+
+.terms-section{ margin-top:40px; }
+.terms-label{ font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#8a7c74; margin-bottom:12px; }
+.terms-list{ display:flex; flex-direction:column; gap:8px; }
+.term-item{ display:flex; align-items:flex-start; gap:14px; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px 18px; }
+.term-dot{ width:7px; height:7px; border-radius:50%; background:var(--gold); flex-shrink:0; margin-top:7px; }
+.term-item p{ font-size:14px; color:var(--text-dim); line-height:1.55; margin:0; }
+.term-item p b{ color:#f5f0ec; font-weight:600; }
+
 footer{ padding:60px 8vw 50px; text-align:center; color:var(--text-dim); font-size:14px; border-top:1px solid #2e241f; }
 footer b{ color:var(--gold-light); }
 

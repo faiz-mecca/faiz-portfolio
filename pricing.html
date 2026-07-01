@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricelist — Faiz Mecca · Long Form Video Editor</title>
+<title>Pricelist — Faiz Mecca · Video Editing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
@@ -33,71 +33,137 @@
   <div class="section-head reveal">
     <div>
       <span class="section-tag" data-i18n="pricing_eyebrow">Pricelist</span>
-      <h2 data-i18n="pricing_h2">Long Form Video Editor</h2>
+      <h2 data-i18n="pricing_h2">Video Editing</h2>
     </div>
-    <p class="desc" data-i18n="pricing_desc">Editing · Motion Graphics · Sound Design</p>
+    <p class="desc" data-i18n="pricing_desc">Short Form · Long Form · Motion Graphics</p>
   </div>
 
-  <div class="cards reveal">
-    <div class="card">
-      <h3 data-i18n="std_name">Standard</h3>
-      <div class="cdesc" data-i18n="std_desc">Clean cuts, strong pacing, tight sound — no motion graphics.</div>
-      <div class="tbl-head"><span data-i18n="tbl_dur">FINAL DURATION</span><span data-i18n="tbl_price">PRICE</span></div>
-      <div class="row"><span class="dur">0–15 min</span><span class="price">Rp 250.000</span></div>
-      <div class="row"><span class="dur">16–30 min</span><span class="price">Rp 500.000</span></div>
-      <div class="row"><span class="dur">31–45 min</span><span class="price">Rp 750.000</span></div>
-      <div class="row"><span class="dur">46–60 min</span><span class="price">Rp 850.000</span></div>
-      <div class="custom-row" data-i18n="custom_row">60 min+ → custom quote</div>
-      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_cut">Cut, trim &amp; pacing</span></div>
-      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_sound">Sound design &amp; mixing</span></div>
-      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_subs">Subtitles</span></div>
-      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_rev1">1× revision</span></div>
-      <div class="feat off"><span class="cross">✕</span> <span data-i18n="feat_mg">Motion graphics</span></div>
+  <!-- ── SHORT FORM ── -->
+  <div class="pricing-sub reveal">
+    <div class="pricing-sub-head">
+      <span class="pricing-sub-tag" data-i18n="sf_tag">Short Form</span>
+      <p class="pricing-sub-desc" data-i18n="sf_subdesc">Reels, TikToks &amp; Shorts — max 1:30 min</p>
     </div>
 
-    <div class="card premium">
-      <span class="pill" data-i18n="prem_pill">MOST POPULAR</span>
-      <h3 data-i18n="prem_name">Premium</h3>
-      <div class="cdesc" data-i18n="prem_desc">Full package — motion graphics included for content that stands out.</div>
-      <div class="tbl-head"><span data-i18n="tbl_dur">FINAL DURATION</span><span data-i18n="tbl_price">PRICE</span></div>
-      <div class="row"><span class="dur">0–15 min</span><span class="price">Rp 350.000</span></div>
-      <div class="row"><span class="dur">16–30 min</span><span class="price">Rp 600.000</span></div>
-      <div class="row"><span class="dur">31–45 min</span><span class="price">Rp 850.000</span></div>
-      <div class="row"><span class="dur">46–60 min</span><span class="price">Rp 950.000</span></div>
-      <div class="custom-row" data-i18n="custom_row">60 min+ → custom quote</div>
-      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_cut">Cut, trim &amp; pacing</span></div>
-      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_sound">Sound design &amp; mixing</span></div>
-      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_subs">Subtitles</span></div>
-      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_rev2">2× revisions</span></div>
-      <div class="feat"><span class="check">✓</span> <span data-i18n="feat_mg">Motion graphics</span></div>
-    </div>
-  </div>
-
-  <div class="addons reveal">
-    <div class="addon"><div class="name" data-i18n="addon_rev">Extra Revision</div><div class="amt">Rp 50.000 <span data-i18n="addon_rev_u">/ revision</span></div></div>
-    <div class="addon"><div class="name" data-i18n="addon_exp">Express &lt; 48 Hours</div><div class="amt">+20% <span data-i18n="addon_exp_u">of total</span></div></div>
-  </div>
-
-  <div class="retainer-card reveal">
-    <div class="retainer-top">
-      <div>
-        <h3 data-i18n="ret_title">Monthly Plan</h3>
-        <div class="rdesc" data-i18n-html="ret_desc_html">All retainer plans use <b>Premium</b> service (46–60 min tier) — motion graphics included. Better rates + priority queue.</div>
+    <div class="cards">
+      <div class="card">
+        <h3 data-i18n="sf_std_name">Standard</h3>
+        <div class="cdesc" data-i18n="sf_std_desc">Clean cut, subtitles, and a light sound mix — simple and straight to the point.</div>
+        <div class="sf-price-display">Rp 60.000</div>
+        <div class="sf-price-note" data-i18n="sf_price_note">per video · max 1:30 min</div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_cut">Cut &amp; trim</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_subs">Subtitles</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="sf_feat_sd_light">Light sound mix</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_rev1">1× revision</span></div>
+        <div class="feat off"><span class="cross">✕</span> <span data-i18n="sf_no_sfx">No visual effects</span></div>
       </div>
-      <div class="billed-pill" data-i18n-html="ret_billed_html">Billed at <b>end of month</b></div>
+
+      <div class="card premium">
+        <span class="pill" data-i18n="prem_pill">MOST POPULAR</span>
+        <h3 data-i18n="sf_prem_name">Premium</h3>
+        <div class="cdesc" data-i18n="sf_prem_desc">Full cut with visual effects and energetic sound design — built to grab and hold attention.</div>
+        <div class="sf-price-display">Rp 100.000</div>
+        <div class="sf-price-note" data-i18n="sf_price_note">per video · max 1:30 min</div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_cut">Cut &amp; trim</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_subs">Subtitles</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="sf_feat_sfx">Visual effects</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="sf_feat_sd_full">Energetic sound design</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_rev1">1× revision</span></div>
+      </div>
     </div>
-    <table class="retainer">
-      <tr>
-        <th data-i18n="ret_vol">VOLUME</th>
-        <th data-i18n="ret_reg">REGULAR PRICE</th>
-        <th data-i18n="ret_ret">RETAINER PRICE</th>
-        <th data-i18n="ret_save">SAVE</th>
-        <th style="text-align:right" data-i18n="ret_total">TOTAL / MONTH</th>
-      </tr>
-      <tr><td class="vol" data-i18n="ret_4">4 videos</td><td>Rp 950.000</td><td>Rp 855.000</td><td class="save"><span class="save-badge">10%</span></td><td class="total">Rp 3.420.000</td></tr>
-      <tr><td class="vol" data-i18n="ret_6">6 videos</td><td>Rp 950.000</td><td>Rp 830.000</td><td class="save"><span class="save-badge">12.5%</span></td><td class="total">Rp 4.980.000</td></tr>
-      <tr><td class="vol" data-i18n="ret_8">8 videos</td><td>Rp 950.000</td><td>Rp 810.000</td><td class="save"><span class="save-badge">15%</span></td><td class="total">Rp 6.480.000</td></tr>
-    </table>
+
+    <div class="terms-section">
+      <p class="terms-label" data-i18n="terms_tag">TERMS</p>
+      <div class="terms-list">
+        <div class="term-item"><div class="term-dot"></div><p data-i18n-html="sf_term_1_html">Standard turnaround is <b>~half a day</b>, Premium is <b>~1 day</b> (or faster).</p></div>
+        <div class="term-item"><div class="term-dot"></div><p data-i18n-html="sf_term_2_html">Duration is based on <b>final video length</b> (max 1:30 min), not raw footage.</p></div>
+        <div class="term-item"><div class="term-dot"></div><p data-i18n-html="sf_term_3_html">Payment is <b>due in full</b> after the final video is approved.</p></div>
+        <div class="term-item"><div class="term-dot"></div><p data-i18n-html="sf_term_4_html">Turnaround starts from your <b>agreed schedule</b>.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── LONG FORM ── -->
+  <div class="pricing-sub reveal">
+    <div class="pricing-sub-head">
+      <span class="pricing-sub-tag" data-i18n="lf_tag">Long Form</span>
+      <p class="pricing-sub-desc" data-i18n="lf_subdesc">YouTube videos &amp; long-form content</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3 data-i18n="std_name">Standard</h3>
+        <div class="cdesc" data-i18n="std_desc">Basic cuts, functional pacing, and a light sound mix — no motion graphics.</div>
+        <div class="tbl-head"><span data-i18n="tbl_dur">FINAL DURATION</span><span data-i18n="tbl_price">PRICE</span></div>
+        <div class="row"><span class="dur">0–15 min</span><span class="price">Rp 250.000</span></div>
+        <div class="row"><span class="dur">16–30 min</span><span class="price">Rp 500.000</span></div>
+        <div class="row"><span class="dur">31–45 min</span><span class="price">Rp 750.000</span></div>
+        <div class="row"><span class="dur">46–60 min</span><span class="price">Rp 850.000</span></div>
+        <div class="custom-row" data-i18n="custom_row">60 min+ → custom quote</div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_cut">Cut &amp; trim</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="lf_feat_pacing_std">Functional pacing</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_sound">Light sound mix</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_subs">Subtitles</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_rev1">1× revision</span></div>
+        <div class="feat off"><span class="cross">✕</span> <span data-i18n="feat_mg">Motion graphics</span></div>
+      </div>
+
+      <div class="card premium">
+        <span class="pill" data-i18n="prem_pill">MOST POPULAR</span>
+        <h3 data-i18n="prem_name">Premium</h3>
+        <div class="cdesc" data-i18n="prem_desc">Full edit — tight pacing, full sound design, and motion graphics.</div>
+        <div class="tbl-head"><span data-i18n="tbl_dur">FINAL DURATION</span><span data-i18n="tbl_price">PRICE</span></div>
+        <div class="row"><span class="dur">0–15 min</span><span class="price">Rp 350.000</span></div>
+        <div class="row"><span class="dur">16–30 min</span><span class="price">Rp 600.000</span></div>
+        <div class="row"><span class="dur">31–45 min</span><span class="price">Rp 850.000</span></div>
+        <div class="row"><span class="dur">46–60 min</span><span class="price">Rp 950.000</span></div>
+        <div class="custom-row" data-i18n="custom_row">60 min+ → custom quote</div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_cut">Cut &amp; trim</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="lf_feat_pacing_prem">Tight pacing</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="lf_feat_sound_prem">Full sound design</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_subs">Subtitles</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_mg">Motion graphics</span></div>
+        <div class="feat"><span class="check">✓</span> <span data-i18n="feat_rev2">2× revisions</span></div>
+      </div>
+    </div>
+
+    <div class="addons reveal">
+      <div class="addon"><div class="name" data-i18n="addon_rev">Extra Revision</div><div class="amt">Rp 50.000 <span data-i18n="addon_rev_u">/ revision</span></div></div>
+      <div class="addon"><div class="name" data-i18n="addon_exp">Express &lt; 48 Hours</div><div class="amt">+20% <span data-i18n="addon_exp_u">of total</span></div></div>
+    </div>
+
+    <div class="retainer-card reveal">
+      <div class="retainer-top">
+        <div>
+          <h3 data-i18n="ret_title">Monthly Plan</h3>
+          <div class="rdesc" data-i18n-html="ret_desc_html">All retainer plans use <b>Premium</b> service (46–60 min tier) — motion graphics included. Better rates + priority queue.</div>
+        </div>
+        <div class="billed-pill" data-i18n-html="ret_billed_html">Billed at <b>end of month</b></div>
+      </div>
+      <table class="retainer">
+        <tr>
+          <th data-i18n="ret_vol">VOLUME</th>
+          <th data-i18n="ret_reg">REGULAR PRICE</th>
+          <th data-i18n="ret_ret">RETAINER PRICE</th>
+          <th data-i18n="ret_save">SAVE</th>
+          <th style="text-align:right" data-i18n="ret_total">TOTAL / MONTH</th>
+        </tr>
+        <tr><td class="vol" data-i18n="ret_4">4 videos</td><td>Rp 950.000</td><td>Rp 855.000</td><td class="save"><span class="save-badge">10%</span></td><td class="total">Rp 3.420.000</td></tr>
+        <tr><td class="vol" data-i18n="ret_6">6 videos</td><td>Rp 950.000</td><td>Rp 830.000</td><td class="save"><span class="save-badge">12.5%</span></td><td class="total">Rp 4.980.000</td></tr>
+        <tr><td class="vol" data-i18n="ret_8">8 videos</td><td>Rp 950.000</td><td>Rp 810.000</td><td class="save"><span class="save-badge">15%</span></td><td class="total">Rp 6.480.000</td></tr>
+      </table>
+    </div>
+
+    <div class="terms-section">
+      <p class="terms-label" data-i18n="terms_tag">TERMS</p>
+      <div class="terms-list">
+        <div class="term-item"><div class="term-dot"></div><p data-i18n-html="lf_term_1_html">Standard turnaround is <b>3 days</b> for client preview.</p></div>
+        <div class="term-item"><div class="term-dot"></div><p data-i18n-html="lf_term_2_html">Duration is based on <b>final video length</b>, not raw footage.</p></div>
+        <div class="term-item"><div class="term-dot"></div><p data-i18n-html="lf_term_3_html">Payment is <b>due in full</b> after the final video is approved.</p></div>
+        <div class="term-item"><div class="term-dot"></div><p data-i18n-html="lf_term_4_html">Retainer is billed at <b>end of month</b>.</p></div>
+        <div class="term-item"><div class="term-dot"></div><p data-i18n-html="lf_term_5_html">Turnaround starts from your <b>agreed schedule</b>.</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
