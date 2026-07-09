@@ -53,21 +53,29 @@ section[id]{ scroll-margin-top:104px; }
 .tb-nav a:hover{ color:var(--text); }
 .tb-nav a.active{ color:var(--text); background:rgba(255,255,255,0.08); }
 .tb-item{ position:relative; }
+/* Outer layer is an invisible hit-box bridge (padding-top) so the cursor never
+   leaves a hoverable element on its way from the trigger down into the menu —
+   without it, the gap between them breaks :hover and the menu snaps shut. */
 .tb-dropdown{
-  position:absolute; top:calc(100% + 10px); left:50%;
-  transform:translateX(-50%) translateY(-6px);
-  background:rgba(30,22,18,.97); backdrop-filter:blur(18px) saturate(150%); -webkit-backdrop-filter:blur(18px) saturate(150%);
-  border:1px solid rgba(255,255,255,0.09); border-radius:16px; padding:8px; min-width:200px;
-  display:flex; flex-direction:column; gap:2px;
-  opacity:0; pointer-events:none; transition:opacity .2s, transform .2s;
-  box-shadow:0 20px 50px rgba(0,0,0,.45);
+  position:absolute; top:100%; left:50%; transform:translateX(-50%); padding-top:10px;
+  opacity:0; pointer-events:none; transition:opacity .18s ease;
 }
-.tb-item:hover .tb-dropdown, .tb-item.open .tb-dropdown{ opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+.tb-item:hover .tb-dropdown, .tb-item.open .tb-dropdown{ opacity:1; pointer-events:auto; }
+.tb-dropdown-inner{
+  transform:translateY(-8px) scale(.97); transform-origin:top center;
+  background:rgba(30,22,18,.97); backdrop-filter:blur(18px) saturate(150%); -webkit-backdrop-filter:blur(18px) saturate(150%);
+  border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:8px; min-width:210px;
+  display:flex; flex-direction:column; gap:2px;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
+  transition:transform .22s cubic-bezier(.2,.8,.3,1);
+}
+.tb-item:hover .tb-dropdown-inner, .tb-item.open .tb-dropdown-inner{ transform:translateY(0) scale(1); }
 .tb-dropdown a{
-  padding:10px 14px; border-radius:10px; font-size:12px; font-weight:500; letter-spacing:1px; text-transform:uppercase;
-  color:var(--text-dim); text-decoration:none; transition:.2s; white-space:nowrap;
+  padding:11px 16px; border-radius:10px; font-size:12px; font-weight:500; letter-spacing:1px; text-transform:uppercase;
+  color:var(--text-dim); text-decoration:none; transition:background .2s, color .2s; white-space:nowrap;
 }
 .tb-dropdown a:hover{ background:rgba(255,255,255,0.08); color:var(--text); }
+.tb-dropdown a + a{ border-top:1px solid rgba(255,255,255,0.06); }
 .topbar-right{ display:flex; align-items:center; gap:12px; }
 .lang-toggle{ display:flex; align-items:center; gap:2px; }
 .lang-btn{
