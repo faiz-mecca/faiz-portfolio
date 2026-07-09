@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T07:51:15.236Z",
+  "generatedAt": "2026-07-09T01:41:42.740Z",
   "categories": [
     {
       "id": "talent",
@@ -10,8 +10,8 @@
       "items": [
         {
           "caption": "Expressive Talent",
-          "description": "Two POV skits for Meraki Agency, different scenes but the same sharp instinct — expressive timing and genuine reactions that sell every bit right to the punchline.",
-          "description_id": "Dua skit POV buat Meraki Agency — scene beda tapi instingnya sama tajamnya. Timing ekspresif dan reaksi yang natural ngejual setiap bit sampai ke punchline-nya.",
+          "description": "Two POV skits for Meraki Agency, different scenes but same energy — the timing and reactions feel real all the way to the punchline.",
+          "description_id": "Dua skit POV buat Meraki Agency, scene beda tapi energinya sama — timing dan reaksinya kerasa natural sampai ke punchline-nya.",
           "source": "",
           "tier": "",
           "videos": [
@@ -37,8 +37,8 @@
         },
         {
           "caption": "Informative Talent",
-          "description": "Hosting for Botomotif across two different cars — keeping things clear and natural enough that it actually feels like a conversation, not a spec sheet.",
-          "description_id": "Host buat Botomotif di dua mobil berbeda — penyampaian yang clear dan natural bikin detail-detailnya gampang masuk dan enak diikutin, bukan kayak baca brosur.",
+          "description": "Hosting for Botomotif on two different cars — kept it clear and easygoing so it feels like a chat, not a spec sheet.",
+          "description_id": "Host buat Botomotif di dua mobil beda — dibawain santai dan jelas biar berasa ngobrol, bukan kayak baca brosur.",
           "source": "",
           "tier": "",
           "videos": [
@@ -73,8 +73,8 @@
       "items": [
         {
           "caption": "Cinematic Framing",
-          "description": "Corporate profile shoot for PT Hisotex — deliberate lighting, movement, and framing that makes the brand feel premium on screen.",
-          "description_id": "Syuting profil korporat buat PT Hisotex — pencahayaan, gerakan, dan framing yang disengaja biar brand-nya keliatan premium di layar.",
+          "description": "Company profile shoot for PT Hisotex — lighting and camera moves picked to make the brand look premium on screen.",
+          "description_id": "Syuting company profile buat PT Hisotex — pencahayaan dan gerakan kamera dipilih biar brand-nya keliatan premium di layar.",
           "source": "Company Profile",
           "tier": "",
           "title": "PT HISOTEX",
@@ -88,8 +88,8 @@
         },
         {
           "caption": "Subject Framing",
-          "description": "Automotive feature shoot — every frame composed so the car and talent both read clean and look polished right out of the camera.",
-          "description_id": "Syuting fitur otomotif — setiap frame dikomposisiin biar mobilnya dan talent-nya keliatan bersih dan polished langsung dari kamera.",
+          "description": "Automotive feature shoot — framed so both the car and the talent look clean straight out of camera, no heavy grading needed.",
+          "description_id": "Syuting fitur otomotif — di-frame biar mobil dan talent-nya udah keliatan bersih langsung dari kamera, gak perlu banyak polesan lagi.",
           "source": "",
           "tier": "",
           "title": "Bawa Ford Mustang ke Tongkrongan Buna… Endingnya Gue Ditelepon Bahlil Lahadalia?! 😳🔥",
@@ -112,8 +112,8 @@
       "items": [
         {
           "caption": "Aesthetic Typography",
-          "description": "Two Reels that lead with type — text movement locked to the audio so the rhythm hooks you before you even realize it.",
-          "description_id": "Dua Reels yang dipimpin tipografi — gerakan teks dikunci ke audio biar ritme-nya udah nge-hook sebelum kamu sadar.",
+          "description": "Two Reels built around typography — the text moves right on beat with the audio so it hooks you before you notice why.",
+          "description_id": "Dua Reels yang mainnya di tipografi — gerakan teksnya pas banget sama beat audio, jadi nge-hook duluan sebelum kamu sadar kenapa.",
           "source": "Reels",
           "tier": "Standard",
           "videos": [
@@ -139,8 +139,8 @@
         },
         {
           "caption": "Elegant Shoot + Edit",
-          "description": "Two pieces for Botomotif from shot to final cut — deliberate framing on set and a grade that makes each car look exactly as premium as it should.",
-          "description_id": "Dua project buat Botomotif dari syuting sampai cut final — framing yang niat di set dan grade yang bikin setiap mobil keliatan sepremium yang semestinya.",
+          "description": "Two projects for Botomotif, shot and edited start to finish — framed carefully on set, graded so each car looks as premium as it should.",
+          "description_id": "Dua project buat Botomotif dari syuting sampai edit final — framing-nya diperhatiin di lokasi, warnanya digrade biar tiap mobil keliatan sepremium mestinya.",
           "source": "",
           "tier": "Standard",
           "videos": [
@@ -175,8 +175,8 @@
       "items": [
         {
           "caption": "Edited for Big Creators",
-          "description": "Editing for Edward Halim — keeping a long YouTube video actually watchable the whole way through, so the views don't just come in, they stick.",
-          "description_id": "Edit buat Edward Halim — bikin video YouTube panjang tetap enak ditonton dari awal sampai akhir, biar viewsnya nggak cuma datang tapi juga betah.",
+          "description": "Editing for Edward Halim — keeping a long video watchable start to finish, so people don't just click, they stay.",
+          "description_id": "Edit buat Edward Halim — video panjangnya tetap enak ditonton dari awal sampai akhir, biar penonton nggak cuma mampir tapi juga betah.",
           "source": "",
           "tier": "Premium",
           "title": "Nyobain Semua Scam Di Turki!",

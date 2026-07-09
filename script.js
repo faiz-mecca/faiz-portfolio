@@ -12,6 +12,28 @@ function scrollToHash() {
 }
 window.addEventListener('load', scrollToHash);
 
+// ---- portfolio nav dropdown: hover on desktop, tap-to-open on mobile ----
+const portfolioNavItem = document.querySelector('.tb-item.has-dropdown');
+if (portfolioNavItem) {
+  const isMobile = () => window.matchMedia('(max-width: 760px)').matches;
+  const trigger = portfolioNavItem.querySelector('a[data-nav="portfolio"]');
+  trigger.addEventListener('click', (e) => {
+    if (!isMobile()) return;
+    if (!portfolioNavItem.classList.contains('open')) {
+      e.preventDefault();
+      portfolioNavItem.classList.add('open');
+    } else {
+      portfolioNavItem.classList.remove('open');
+    }
+  });
+  portfolioNavItem.querySelectorAll('.tb-dropdown a').forEach(a => {
+    a.addEventListener('click', () => portfolioNavItem.classList.remove('open'));
+  });
+  document.addEventListener('click', (e) => {
+    if (!portfolioNavItem.contains(e.target)) portfolioNavItem.classList.remove('open');
+  });
+}
+
 // ---- topbar: hide on scroll down, show on scroll up ----
 const topbar = document.querySelector('.topbar');
 if (topbar) {
