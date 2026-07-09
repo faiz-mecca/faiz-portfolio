@@ -1,14 +1,16 @@
 // ---- scroll restoration: always start at top on load/refresh ----
 history.scrollRestoration = 'manual';
 
-// Hash navigation from another page (e.g. pricing → index.html#contact):
-// dynamic content changes page height after load, so we re-scroll after a tick.
-window.addEventListener('load', () => {
-  if (location.hash) {
-    const el = document.querySelector(location.hash);
-    if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
-  }
-});
+// Hash navigation from another page (e.g. pricing → index.html#contact), or a direct
+// link straight to a portfolio category (e.g. #short-form-edit). Portfolio groups are
+// rendered async from fetched JSON, so the target may not exist yet on `load` — this
+// gets called again once that render finishes.
+function scrollToHash() {
+  if (!location.hash) return;
+  const el = document.querySelector(location.hash);
+  if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+}
+window.addEventListener('load', scrollToHash);
 
 // ---- topbar: hide on scroll down, show on scroll up ----
 const topbar = document.querySelector('.topbar');
@@ -163,7 +165,7 @@ function groupHTML(cat) {
   const lang = getLang();
   const title = lang === 'id' ? (cat.title_id || cat.title) : cat.title;
   const blurb = lang === 'id' ? (cat.blurb_id || cat.blurb) : cat.blurb;
-  return `<div class="vgroup reveal">
+  return `<div class="vgroup reveal" id="${esc(cat.id)}">
     <div class="vgroup-head">
       <h3 data-title-en="${esc(cat.title)}" data-title-id="${esc(cat.title_id || cat.title)}">${esc(title)}</h3>
       ${cat.blurb ? `<span class="vgroup-blurb" data-blurb-en="${esc(cat.blurb)}" data-blurb-id="${esc(cat.blurb_id || cat.blurb)}">${esc(blurb)}</span>` : ''}
@@ -237,6 +239,7 @@ if (orderBtns.length && waCta) {
     const data = await res.json();
     mount.innerHTML = data.categories.map(groupHTML).join('');
     observeReveals(mount);
+    scrollToHash();
     mount.addEventListener('click', e => {
       const trigger = e.target.closest('.sc-media');
       if (!trigger) return;
