@@ -151,6 +151,7 @@ async function main() {
   let ok = 0, warn = 0;
 
   for (const cat of source.categories) {
+    if (cat.hidden) { console.log(`  skip [hidden] ${cat.title}`); continue; }
     const items = [];
     for (const v of cat.videos) {
       // Pair entry (urls array) — produces one item with a nested `videos` array

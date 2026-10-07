@@ -405,7 +405,7 @@ footer b{ color:var(--gold-light); }
   .about-card{ padding:28px 24px; }
   .about-profile{ flex-direction:column; gap:16px; }
   section{ padding:90px 6vw; }
-  .pricing-page{ padding-top:170px; }
+  .pricing-page{ padding-top:130px; }
   .topbar{
     flex-wrap:wrap; row-gap:8px; padding:12px 14px 12px 20px; gap:10px;
     border-radius:24px; top:12px;

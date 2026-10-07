@@ -1,108 +1,6 @@
 {
-  "generatedAt": "2026-07-09T01:41:42.740Z",
+  "generatedAt": "2026-10-07T07:27:17.610Z",
   "categories": [
-    {
-      "id": "talent",
-      "title": "Talent",
-      "title_id": "Talent",
-      "blurb": "In front of the camera",
-      "blurb_id": "Di depan kamera",
-      "items": [
-        {
-          "caption": "Expressive Talent",
-          "description": "Two POV skits for Meraki Agency, different scenes but same energy — the timing and reactions feel real all the way to the punchline.",
-          "description_id": "Dua skit POV buat Meraki Agency, scene beda tapi energinya sama — timing dan reaksinya kerasa natural sampai ke punchline-nya.",
-          "source": "",
-          "tier": "",
-          "videos": [
-            {
-              "platform": "tiktok",
-              "platformLabel": "TikTok",
-              "link": "https://www.tiktok.com/@merakiagency.id/video/7602200743814237448",
-              "embed": "https://www.tiktok.com/player/v1/7602200743814237448?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
-              "file": "",
-              "thumb": "assets/thumbs/tiktok-7602200743814237448.jpg",
-              "ar": "9/16"
-            },
-            {
-              "platform": "tiktok",
-              "platformLabel": "TikTok",
-              "link": "https://www.tiktok.com/@merakiagency.id/video/7592179223566011669",
-              "embed": "https://www.tiktok.com/player/v1/7592179223566011669?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
-              "file": "",
-              "thumb": "assets/thumbs/tiktok-7592179223566011669.jpg",
-              "ar": "9/16"
-            }
-          ]
-        },
-        {
-          "caption": "Informative Talent",
-          "description": "Hosting for Botomotif on two different cars — kept it clear and easygoing so it feels like a chat, not a spec sheet.",
-          "description_id": "Host buat Botomotif di dua mobil beda — dibawain santai dan jelas biar berasa ngobrol, bukan kayak baca brosur.",
-          "source": "",
-          "tier": "",
-          "videos": [
-            {
-              "platform": "tiktok",
-              "platformLabel": "TikTok",
-              "link": "https://www.tiktok.com/@botomotif/video/7648977134995868936",
-              "embed": "https://www.tiktok.com/player/v1/7648977134995868936?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
-              "file": "",
-              "thumb": "assets/thumbs/tiktok-7648977134995868936.jpg",
-              "ar": "9/16"
-            },
-            {
-              "platform": "tiktok",
-              "platformLabel": "TikTok",
-              "link": "https://www.tiktok.com/@botomotif/video/7648974575451081991",
-              "embed": "https://www.tiktok.com/player/v1/7648974575451081991?autoplay=1&music_info=0&description=0&controls=1&rel=0&native_context_menu=0",
-              "file": "",
-              "thumb": "assets/thumbs/tiktok-7648974575451081991.jpg",
-              "ar": "9/16"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "videographer",
-      "title": "Videographer",
-      "title_id": "Videografer",
-      "blurb": "Cinematic shooting",
-      "blurb_id": "Syuting sinematik",
-      "items": [
-        {
-          "caption": "Cinematic Framing",
-          "description": "Company profile shoot for PT Hisotex — lighting and camera moves picked to make the brand look premium on screen.",
-          "description_id": "Syuting company profile buat PT Hisotex — pencahayaan dan gerakan kamera dipilih biar brand-nya keliatan premium di layar.",
-          "source": "Company Profile",
-          "tier": "",
-          "title": "PT HISOTEX",
-          "platform": "drive",
-          "platformLabel": "Video",
-          "link": "https://drive.google.com/file/d/1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI/view",
-          "embed": "https://drive.google.com/file/d/1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI/preview",
-          "file": "",
-          "thumb": "assets/thumbs/drive-1VW4NRWT9jgNkyHugwkj_I2L9BjL_XRTI.jpg",
-          "ar": "16/9"
-        },
-        {
-          "caption": "Subject Framing",
-          "description": "Automotive feature shoot — framed so both the car and the talent look clean straight out of camera, no heavy grading needed.",
-          "description_id": "Syuting fitur otomotif — di-frame biar mobil dan talent-nya udah keliatan bersih langsung dari kamera, gak perlu banyak polesan lagi.",
-          "source": "",
-          "tier": "",
-          "title": "Bawa Ford Mustang ke Tongkrongan Buna… Endingnya Gue Ditelepon Bahlil Lahadalia?! 😳🔥",
-          "platform": "youtube",
-          "platformLabel": "YouTube",
-          "link": "https://www.youtube.com/watch?v=88zaKmRoVHI",
-          "embed": "https://www.youtube.com/embed/88zaKmRoVHI?autoplay=1&rel=0",
-          "file": "",
-          "thumb": "assets/thumbs/youtube-88zaKmRoVHI.jpg",
-          "ar": "16/9"
-        }
-      ]
-    },
     {
       "id": "short-form-edit",
       "title": "Short Form Edit",
@@ -111,11 +9,38 @@
       "blurb_id": "Reels & shorts yang langsung hook",
       "items": [
         {
+          "caption": "High-Retention Hooks",
+          "description": "Two talking-head ad hooks — word-by-word captions with highlighted keywords, pop-up visuals, and hard emphasis beats, all landing in the first few seconds.",
+          "description_id": "Dua hook iklan talking-head — caption per kata dengan keyword yang di-highlight, visual pop-up, dan penekanan yang nendang, semuanya kena di detik-detik pertama.",
+          "source": "Ads",
+          "tier": "Premium",
+          "videos": [
+            {
+              "platform": "drive",
+              "platformLabel": "Video",
+              "link": "",
+              "embed": "",
+              "file": "assets/videos/drive-1q0I6Sj56aAYkJoOU2Ih0Emg7j5Xu8Jgx.mp4",
+              "thumb": "assets/thumbs/drive-1q0I6Sj56aAYkJoOU2Ih0Emg7j5Xu8Jgx.jpg",
+              "ar": "9/16"
+            },
+            {
+              "platform": "drive",
+              "platformLabel": "Video",
+              "link": "",
+              "embed": "",
+              "file": "assets/videos/drive-1jgcWtmu4JQ7FdMPotBteJL7PD_5SMvIJ.mp4",
+              "thumb": "assets/thumbs/drive-1jgcWtmu4JQ7FdMPotBteJL7PD_5SMvIJ.jpg",
+              "ar": "9/16"
+            }
+          ]
+        },
+        {
           "caption": "Aesthetic Typography",
           "description": "Two Reels built around typography — the text moves right on beat with the audio so it hooks you before you notice why.",
           "description_id": "Dua Reels yang mainnya di tipografi — gerakan teksnya pas banget sama beat audio, jadi nge-hook duluan sebelum kamu sadar kenapa.",
           "source": "Reels",
-          "tier": "Standard",
+          "tier": "Premium",
           "videos": [
             {
               "platform": "drive",

@@ -1,8 +1,9 @@
 {
-  "_comment": "Edit ONLY this file to add/remove videos. Then run: npm run build:videos . Fields: url/urls, caption, description (EN), description_id (ID), ar, source. Categories also support blurb_id and title_id for Indonesian.",
+  "_comment": "Edit ONLY this file to add/remove videos. Then run: npm run build:videos . Fields: url/urls, caption, description (EN), description_id (ID), ar, source. Categories also support blurb_id and title_id for Indonesian, and \"hidden\": true to keep a category's data here but leave it off the site.",
   "categories": [
     {
       "id": "talent",
+      "hidden": true,
       "title": "Talent",
       "title_id": "Talent",
       "blurb": "In front of the camera",
@@ -24,6 +25,7 @@
     },
     {
       "id": "videographer",
+      "hidden": true,
       "title": "Videographer",
       "title_id": "Videografer",
       "blurb": "Cinematic shooting",
@@ -52,11 +54,20 @@
       "blurb_id": "Reels & shorts yang langsung hook",
       "videos": [
         {
+          "urls": ["https://drive.google.com/file/d/1q0I6Sj56aAYkJoOU2Ih0Emg7j5Xu8Jgx/view", "https://drive.google.com/file/d/1jgcWtmu4JQ7FdMPotBteJL7PD_5SMvIJ/view"],
+          "caption": "High-Retention Hooks",
+          "ar": "9/16",
+          "source": "Ads",
+          "tier": "Premium",
+          "description": "Two talking-head ad hooks — word-by-word captions with highlighted keywords, pop-up visuals, and hard emphasis beats, all landing in the first few seconds.",
+          "description_id": "Dua hook iklan talking-head — caption per kata dengan keyword yang di-highlight, visual pop-up, dan penekanan yang nendang, semuanya kena di detik-detik pertama."
+        },
+        {
           "urls": ["https://drive.google.com/file/d/1qeg7Xwwkb7gX93uNdDDqTTpYGXFhQoaa/view", "https://drive.google.com/file/d/1a96MvRoJDnyRvBC8YzVJR42o3EtPFhw1/view"],
           "caption": "Aesthetic Typography",
           "ar": "9/16",
           "source": "Reels",
-          "tier": "Standard",
+          "tier": "Premium",
           "description": "Two Reels built around typography — the text moves right on beat with the audio so it hooks you before you notice why.",
           "description_id": "Dua Reels yang mainnya di tipografi — gerakan teksnya pas banget sama beat audio, jadi nge-hook duluan sebelum kamu sadar kenapa."
         },
